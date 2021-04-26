@@ -20,23 +20,27 @@ export default createGlobalStyle`
   }
 
   h1 {
-      font-size: 64px;
-
-      @media(min-width: 1024px) {
-          font-size: 96px;
-      }
-  }
-
-  h2 {
-      font-size: 48px;
+      font-size: 54px;
 
       @media(min-width: 1024px) {
           font-size: 72px;
       }
   }
 
+  h2 {
+      font-size: 36px;
+
+      @media(min-width: 1024px) {
+          font-size: 48px;
+      }
+  }
+
   h3 {
-      font-size: 24px;
+      font-size: 28px;
+
+      @media(min-width: 1024px) {
+          font-size: 24px;
+      }
   }
 
   a {
@@ -50,6 +54,10 @@ export default createGlobalStyle`
 
   p {
       margin-bottom: 16px;
-      line-height: 30px;
+      line-height: 24px;
+  }
+
+  button {
+      cursor: pointer;
   }
 `

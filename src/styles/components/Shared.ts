@@ -91,7 +91,7 @@ export const Title = styled.h2`
     }
     width: 100%;
     max-width: 380px;
-    padding: 24px;
+    padding: 16px;
     z-index: 2;
 `;
 

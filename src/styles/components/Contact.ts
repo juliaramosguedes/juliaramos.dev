@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import {EmailOutline} from '@styled-icons/evaicons-outline/EmailOutline'
+import { darken } from 'polished';
 
 import theme from '../theme';
 
 
-export const Section = styled.footer`
+export const Section = styled.section`
     background-color: ${theme.colors.text};
-    padding: 112px 32px 144px;
+    padding: 112px 32px 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +15,11 @@ export const Section = styled.footer`
     color: white;
     width: 100%;
     position: relative;
+    min-height: 100vh;
+
+    @media(min-width: 1024px) {
+        padding: 112px 32px 36px;
+    }
 `
 
 export const Container = styled.div`
@@ -25,6 +31,20 @@ export const Container = styled.div`
     @media(min-width: 1024px) {
         margin-top: 48px;
     }
+`
+
+export const Footer = styled.footer`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 104px;
+    color: ${darken(0.25, '#ffffff')};
+    font-size: 18px;
+
+    @media(min-width: 1024px) {
+        margin-top: 96px;
+    }
+
 `
 
 export const Text = styled.p`
@@ -88,9 +108,17 @@ export const Background = styled.div`
     position: absolute;
     top: 250px;
     right: 72px;
+    overflow: hidden;
+
 
     @media(min-width: 1024px) {
         top: 0;
-        left: -750px;
+        left: -300px;
+        height: 100vh;
+        width: 720px;
+
+        img {
+            height: 100vh;
+        }
     }
 `

@@ -5,17 +5,28 @@ import { Github } from '@styled-icons/fa-brands/Github';
 import { LinkedinIn } from '@styled-icons/fa-brands/LinkedinIn';
 
 import theme from '../styles/theme';
-import { Email, EmailIcon, FollowMe, Planet, Section, SocialMedia, Background, Text, Container } from '../styles/components/Footer';
+import {
+    Background,
+    Container,
+    Email,
+    EmailIcon,
+    FollowMe,
+    Footer,
+    Planet,
+    Section,
+    SocialMedia,
+    Text,
+} from '../styles/components/Contact';
 import { Separator, Title } from '../styles/components/Shared';
 import saturn from '../assets/saturn.png';
-import BgStars from '../assets/bg-stars-1.svg'
+import bgStars from '../assets/bg-stars-1.png';
 
 
 const Banner: React.FC = () => {
     return (
         <Section>
             <Background>
-                <BgStars/>
+                <img src={bgStars} title="Fundo estrelado" />
             </Background>
             <Title color="white">Contato</Title>
             <Container>
@@ -35,17 +46,17 @@ const Banner: React.FC = () => {
                     </a>
                 </SocialMedia>
             </FollowMe>
-            <Container>
+            <Footer>
                 <Text>Desenvolvido com{' '}
                     <Heart title="Coração" width="16px"/> & <Coffee title="Café" width="18px"/>
                     {' '}por <a
                         href="https://www.linkedin.com/in/juliaramosguedes"
                         title="Perfil no Linkedin da Julia Ramos"
-                    ><u>Julia Ramos</u></a>
+                    >Julia Ramos</a>
                 </Text>
                 <Text>&copy; Copyright 2021 - Todos os direitos reservados</Text>
-            </Container>
-            <Planet src={saturn}/>
+                <Planet src={saturn}/>
+            </Footer>
         </Section>
     );
 };
