@@ -49,7 +49,7 @@ export default createGlobalStyle`
   }
 
   p {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       line-height: 30px;
   }
 `
