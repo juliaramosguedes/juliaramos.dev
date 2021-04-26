@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 import theme from '../theme';
 
+interface ISeparatorDTO {
+    color?: string;
+    transparent?: boolean;
+    height: string;
+}
+
+interface ITitleDTO {
+    align?: string;
+    color?: string;
+}
+
+
 export const Section = styled.section`
     padding: 90px 36px 120px;
 
@@ -72,7 +84,7 @@ export const ParagraphNoMargin = styled.p`
 `;
 
 export const Title = styled.h2`
-    ${({ color, align }) =>
+    ${({ color, align }: ITitleDTO) =>
         `color: ${color || theme.colors.primary};
         border: 5px solid ${color || theme.colors.primary};
         text-align: ${align || 'center'};`
@@ -84,6 +96,6 @@ export const Title = styled.h2`
 `;
 
 export const Separator = styled.div`
-    ${({ height }) => `height: ${height};`}
-    ${({ transparent, color }) => `border: ${transparent ? 0 : "1px solid " + color};`}
+    ${({ height }: ISeparatorDTO) => `height: ${height};`}
+    ${({ transparent, color }: ISeparatorDTO) => `border: ${transparent ? 0 : "1px solid " + color};`}
 `;

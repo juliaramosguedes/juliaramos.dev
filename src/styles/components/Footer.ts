@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {EmailOutline} from '@styled-icons/evaicons-outline/EmailOutline'
 
 import theme from '../theme';
-import BgStars from '../../assets/bg-stars-1.svg'
+
 
 export const Section = styled.footer`
     background-color: ${theme.colors.text};
@@ -83,7 +83,7 @@ export const Planet = styled.img`
     right: 50px;
 `
 
-export const Stars = styled(BgStars)`
+export const Background = styled.div`
     z-index: 0;
     position: absolute;
     top: 250px;

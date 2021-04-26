@@ -5,14 +5,18 @@ import { Github } from '@styled-icons/fa-brands/Github';
 import { LinkedinIn } from '@styled-icons/fa-brands/LinkedinIn';
 
 import theme from '../styles/theme';
-import { Email, EmailIcon, FollowMe, Planet, Section, SocialMedia, Stars, Text, Container } from '../styles/components/Footer';
+import { Email, EmailIcon, FollowMe, Planet, Section, SocialMedia, Background, Text, Container } from '../styles/components/Footer';
 import { Separator, Title } from '../styles/components/Shared';
 import saturn from '../assets/saturn.png';
+import BgStars from '../assets/bg-stars-1.svg'
+
 
 const Banner: React.FC = () => {
     return (
         <Section>
-            <Stars/>
+            <Background>
+                <BgStars/>
+            </Background>
             <Title color="white">Contato</Title>
             <Container>
                 <Text>Você pode falar comigo através do email</Text>
