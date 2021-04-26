@@ -1,20 +1,20 @@
-import React from 'react'
-import Document, {DocumentContext, DocumentInitialProps, Html, Head, Main, NextScript} from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import React from 'react';
+import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
-        const sheet = new ServerStyleSheet()
-        const originalRenderPage = ctx.renderPage
+        const sheet = new ServerStyleSheet();
+        const originalRenderPage = ctx.renderPage;
 
         try {
             ctx.renderPage = () =>
                 originalRenderPage({
                     enhanceApp: (App) => (props) =>
                         sheet.collectStyles(<App {...props} />),
-                })
+                });
 
-            const initialProps = await Document.getInitialProps(ctx)
+            const initialProps = await Document.getInitialProps(ctx);
             return {
                 ...initialProps,
                 styles: (
@@ -23,26 +23,31 @@ export default class MyDocument extends Document {
                         {sheet.getStyleElement()}
                     </>
                 ),
-            }
+            };
         } finally {
-            sheet.seal()
+            sheet.seal();
         }
     }
 
     render(): JSX.Element {
-        return(
+        return (
             <Html lang="pt-BR">
                 <Head>
-                    <meta charSet="utf-8" />
-                    <link
-                        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,300&display=swap"
-                        rel="stylesheet"
+                    <meta charSet="utf-8"/>
+                    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+                    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+                          rel="stylesheet"/>
+                    <link rel="canonical" href="https://www.juliaramos.dev"/>
+                    <link rel="icon" href="favicon.ico"/>
+                    <meta name="robots" content="index, follow"/>
+                    <meta
+                        name="description"
+                        content="Julia Ramos, engenheira de software full stack e professora. Conheça meu trabalho."
                     />
+                    <meta name="author" content="Julia Ramos"/>
                 </Head>
-                <body>
-                    <Main />
-                    <NextScript />
-                </body>
+                <Main/>
+                <NextScript/>
             </Html>
         );
     }
