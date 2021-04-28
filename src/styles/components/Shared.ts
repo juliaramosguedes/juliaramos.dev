@@ -12,6 +12,12 @@ interface ITitleDTO {
     color?: string;
 }
 
+interface IImageDTO {
+    top?: string;
+    bottom?: string;
+    right?: string;
+    left?: string;
+}
 
 export const Section = styled.section`
     padding: 90px 36px 120px;
@@ -99,3 +105,13 @@ export const Separator = styled.div`
     ${({ height }: ISeparatorDTO) => `height: ${height};`}
     ${({ transparent, color }: ISeparatorDTO) => `border: ${transparent ? 0 : "1px solid " + color};`}
 `;
+
+export const Image = styled.img`
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    ${({bottom}: IImageDTO) => bottom && `bottom: ${bottom}`};
+    ${({top}: IImageDTO) => top && `top: ${top}`};
+    ${({left}: IImageDTO) => left && `left: ${left}`};
+    ${({right}: IImageDTO) => right && `right: ${right}`};
+`

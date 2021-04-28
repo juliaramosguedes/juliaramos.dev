@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import { Heart } from '@styled-icons/fa-solid/Heart';
 import { Coffee } from '@styled-icons/fa-solid/Coffee';
 import { Github } from '@styled-icons/fa-brands/Github';
@@ -21,10 +21,13 @@ import { Separator, Title } from '../styles/components/Shared';
 import saturn from '../assets/saturn.png';
 import bgStars from '../assets/bg-stars-1.png';
 
+interface ContactProps {
+    contactRef: RefObject<HTMLElement>
+}
 
-const Banner: React.FC = () => {
+const Contact: React.FC<ContactProps> = ({contactRef}) => {
     return (
-        <Section>
+        <Section ref={contactRef}>
             <Background>
                 <img src={bgStars} title="Fundo estrelado" />
             </Background>
@@ -61,4 +64,4 @@ const Banner: React.FC = () => {
     );
 };
 
-export default Banner;
+export default Contact;
