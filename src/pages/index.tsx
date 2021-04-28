@@ -1,14 +1,28 @@
 import React from 'react';
 import Head from 'next/head';
-import { Contact } from '../components';
+
+import { Contact, Hi } from '../components';
+import { useScroller } from '../hooks';
+
+const scrollerSettings = {
+    isInViewportSettings: {
+        modBottom: '-200%',
+    },
+};
 
 const Home: React.FC = () => {
+    const {
+        ref: contactRef,
+        scroller: contactScroller,
+    } = useScroller(scrollerSettings);
+
     return (
         <>
             <Head>
-                <title>Julia Ramos.Dev</title>
+                <title>Desenvolvedora Julia Ramos</title>
             </Head>
-            <Contact/>
+            <Hi contactScroller={contactScroller} />
+            <Contact contactRef={contactRef}/>
         </>
     );
 };

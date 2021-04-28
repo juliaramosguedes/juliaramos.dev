@@ -99,3 +99,13 @@ export const Separator = styled.div`
     ${({ height }: ISeparatorDTO) => `height: ${height};`}
     ${({ transparent, color }: ISeparatorDTO) => `border: ${transparent ? 0 : "1px solid " + color};`}
 `;
+
+export const Image = styled.img`
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    ${({bottom}) => bottom && `bottom: ${bottom}`};
+    ${({top}) => top && `top: ${top}`};
+    ${({left}) => left && `left: ${left}`};
+    ${({right}) => right && `right: ${right}`};
+`

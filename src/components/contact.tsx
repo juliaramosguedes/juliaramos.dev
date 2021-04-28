@@ -21,10 +21,13 @@ import { Separator, Title } from '../styles/components/Shared';
 import saturn from '../assets/saturn.png';
 import bgStars from '../assets/bg-stars-1.png';
 
+interface ContactProps {
+    contactRef: HTMLDivElement
+}
 
-const Banner: React.FC = () => {
+const Contact: React.FC<ContactProps> = ({contactRef}) => {
     return (
-        <Section>
+        <Section ref={contactRef}>
             <Background>
                 <img src={bgStars} title="Fundo estrelado" />
             </Background>
@@ -61,4 +64,4 @@ const Banner: React.FC = () => {
     );
 };
 
-export default Banner;
+export default Contact;

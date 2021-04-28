@@ -4,7 +4,6 @@ import { darken } from 'polished';
 
 import theme from '../theme';
 
-
 export const Section = styled.section`
     background-color: ${theme.colors.text};
     padding: 112px 32px 160px;
@@ -17,7 +16,7 @@ export const Section = styled.section`
     position: relative;
     min-height: 100vh;
 
-    @media(min-width: 1024px) {
+    @media(min-width:768px) {
         padding: 112px 32px 36px;
     }
 `
@@ -28,7 +27,7 @@ export const Container = styled.div`
     flex-direction: column;
     margin-top: 104px;
 
-    @media(min-width: 1024px) {
+    @media(min-width:768px) {
         margin-top: 48px;
     }
 `
@@ -41,7 +40,7 @@ export const Footer = styled.footer`
     color: ${darken(0.25, '#ffffff')};
     font-size: 18px;
 
-    @media(min-width: 1024px) {
+    @media(min-width:768px) {
         margin-top: 96px;
     }
 
@@ -52,7 +51,7 @@ export const Text = styled.p`
     max-width: 230px;
     z-index: 1;
 
-    @media(min-width: 1024px) {
+    @media(min-width:768px) {
         max-width: 350px;
     }
 `
@@ -86,7 +85,7 @@ export const FollowMe = styled(Container)`
     align-items: center;
     z-index: 1;
 
-    @media(min-width: 1024px) {
+    @media(min-width:768px) {
         flex-direction: row;
 
         p {
@@ -111,7 +110,7 @@ export const Background = styled.div`
     overflow: hidden;
 
 
-    @media(min-width: 1024px) {
+    @media(min-width:768px) {
         top: 0;
         left: -300px;
         height: 100vh;
