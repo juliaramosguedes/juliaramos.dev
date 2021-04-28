@@ -1,11 +1,11 @@
 import React, { RefObject } from 'react';
 
-import { ButtonArrow, Section, Title, TitleBorder, TitleBorderOutline } from '../styles/components/Hi';
+import { ButtonArrow, Section, Title, TitleBorder, TitleBorderOutline, WrapStar } from '../styles/components/Hi';
 import { ColorWhite, Image, ParagraphNoMargin } from '../styles/components/Shared';
 
 import bluePlanet from '../assets/blue-world.png';
 import pinkPlanet from '../assets/pink-world.png';
-import star from '../assets/star.png';
+import Star from '../assets/star.svg';
 import DoubleArrow from '../assets/double-arrow.svg';
 
 interface HiProps {
@@ -23,7 +23,9 @@ const Hi: React.FC<HiProps> = ({ contactScroller, hiRef }) => {
             </TitleBorderOutline>
             <TitleBorder>
                 <Image src={pinkPlanet} left="-40px" bottom="-30px"/>
-                <Image src={star} left="260px" top="-25px"/>
+                <WrapStar>
+                    <Star/>
+                </WrapStar>
             </TitleBorder>
             <ButtonArrow onClick={() => contactScroller()}>
                 <DoubleArrow />
