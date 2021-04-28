@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import { Heart } from '@styled-icons/fa-solid/Heart';
 import { Coffee } from '@styled-icons/fa-solid/Coffee';
 import { Github } from '@styled-icons/fa-brands/Github';
@@ -22,7 +22,7 @@ import saturn from '../assets/saturn.png';
 import bgStars from '../assets/bg-stars-1.png';
 
 interface ContactProps {
-    contactRef: HTMLDivElement
+    contactRef: RefObject<HTMLElement>
 }
 
 const Contact: React.FC<ContactProps> = ({contactRef}) => {

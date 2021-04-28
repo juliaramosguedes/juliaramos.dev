@@ -12,6 +12,12 @@ interface ITitleDTO {
     color?: string;
 }
 
+interface IImageDTO {
+    top?: string;
+    bottom?: string;
+    right?: string;
+    left?: string;
+}
 
 export const Section = styled.section`
     padding: 90px 36px 120px;
@@ -104,8 +110,8 @@ export const Image = styled.img`
     z-index: 1;
     position: absolute;
     overflow: hidden;
-    ${({bottom}) => bottom && `bottom: ${bottom}`};
-    ${({top}) => top && `top: ${top}`};
-    ${({left}) => left && `left: ${left}`};
-    ${({right}) => right && `right: ${right}`};
+    ${({bottom}: IImageDTO) => bottom && `bottom: ${bottom}`};
+    ${({top}: IImageDTO) => top && `top: ${top}`};
+    ${({left}: IImageDTO) => left && `left: ${left}`};
+    ${({right}: IImageDTO) => right && `right: ${right}`};
 `
