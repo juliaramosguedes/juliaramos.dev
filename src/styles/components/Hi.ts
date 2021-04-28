@@ -7,20 +7,18 @@ export const Section = styled.section`
     padding: 120px 56px 0;
     width: 100%;
     position: relative;
-    min-height: 100vh;
 
     background: url(${bgStars}) no-repeat top center;
     background-size: 517px;
 
     @media(min-width:768px) {
-        padding: 30vh 28.75% 0;
-        background: url(${bgStars}) no-repeat top center;
+        padding: 220px 20% 0;
         background-size: 90%;
     }
 
     @media(min-width:1024px) {
-        padding: 30vh 28.75% 0;
-        background: url(${bgStars}) no-repeat top -100% center;
+        padding: 220px 34% 0;
+        background: url(${bgStars}) no-repeat top -200px center;
         background-size: 90%;
     }
 `
@@ -54,7 +52,11 @@ export const TitleBorder = styled.div`
     position: absolute;
 
     @media(min-width: 768px) {
-        width: calc(100% - 28.75%);
+        width: calc(100% - 20%);
+    }
+
+    @media(min-width: 1024px) {
+        width: calc(100% - 34%);
     }
     `
 
