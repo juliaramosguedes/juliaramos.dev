@@ -15,15 +15,16 @@ export const Section = styled.section`
     width: 100%;
     position: relative;
     background: ${theme.colors.text} url(${bgStars}) no-repeat top 250px right 72px;
-    background-size: 1024px;
+    background-size: 600px;
 
     @media(min-width:768px) {
         padding: 112px 32px 36px;
         background: ${theme.colors.text} url(${bgStars}) no-repeat top left -750px;
+        background-size: 1024px;
     }
 
     @media(min-width:1024px) {
-        background: ${theme.colors.text} url(${bgStars}) no-repeat top left -450px;
+        background: ${theme.colors.text} url(${bgStars}) no-repeat top left -750px;
     }
 `
 
