@@ -10,6 +10,7 @@ interface ISeparatorDTO {
 interface ITitleDTO {
     align?: string;
     color?: string;
+    bgColor?: string;
 }
 
 interface IImageDTO {
@@ -90,10 +91,11 @@ export const ParagraphNoMargin = styled.p`
 `;
 
 export const Title = styled.h2`
-    ${({ color, align }: ITitleDTO) =>
+    ${({ color, align, bgColor }: ITitleDTO) =>
         `color: ${color || theme.colors.primary};
         border: 5px solid ${color || theme.colors.primary};
-        text-align: ${align || 'center'};`
+        text-align: ${align || 'center'};
+        background-color: ${bgColor || 'transparent'};`
     }
     width: 100%;
     max-width: 380px;
