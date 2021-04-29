@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
 import Head from 'next/head';
 
-import { Contact, Hi } from '../components';
+import { AboutMe, Contact, Hi } from '../components';
 
 const Home: React.FC = () => {
     const hiRef = useRef();
     const contactRef = useRef(null);
+    const aboutMeRef = useRef(null);
 
     const scroller = (ref) => {
         ref.current.scrollIntoView({
@@ -22,7 +23,8 @@ const Home: React.FC = () => {
             <Head>
                 <title>Desenvolvedora Julia Ramos</title>
             </Head>
-            <Hi hiRef={hiRef} contactScroller={() => scroller(contactRef)} />
+            <Hi hiRef={hiRef} contactScroller={() => scroller(aboutMeRef)} />
+            <AboutMe aboutMeRef={aboutMeRef} />
             <Contact contactRef={contactRef} />
         </>
     );

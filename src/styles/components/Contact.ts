@@ -3,10 +3,10 @@ import {EmailOutline} from '@styled-icons/evaicons-outline/EmailOutline'
 import { darken } from 'polished';
 
 import theme from '../theme';
+import bgStars from '../../assets/bg-stars-1.png';
 
 export const Section = styled.section`
-    background-color: ${theme.colors.text};
-    padding: 112px 32px 160px;
+    padding: 84px 32px 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,10 +14,17 @@ export const Section = styled.section`
     color: white;
     width: 100%;
     position: relative;
-    min-height: 100vh;
+    background: ${theme.colors.text} url(${bgStars}) no-repeat top 250px right 72px;
+    background-size: 600px;
 
     @media(min-width:768px) {
         padding: 112px 32px 36px;
+        background: ${theme.colors.text} url(${bgStars}) no-repeat top left -750px;
+        background-size: 1024px;
+    }
+
+    @media(min-width:1024px) {
+        background: ${theme.colors.text} url(${bgStars}) no-repeat top left -750px;
     }
 `
 
@@ -43,7 +50,6 @@ export const Footer = styled.footer`
     @media(min-width:768px) {
         margin-top: 96px;
     }
-
 `
 
 export const Text = styled.p`
@@ -100,24 +106,4 @@ export const Planet = styled.img`
     position: absolute;
     bottom: 0;
     right: 50px;
-`
-
-export const Background = styled.div`
-    z-index: 0;
-    position: absolute;
-    top: 250px;
-    right: 72px;
-    overflow: hidden;
-
-
-    @media(min-width:768px) {
-        top: 0;
-        left: -300px;
-        height: 100vh;
-        width: 720px;
-
-        img {
-            height: 100vh;
-        }
-    }
 `
