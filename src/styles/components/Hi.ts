@@ -4,15 +4,15 @@ import theme from '../theme';
 import bgStars from '../../assets/bg-stars-1.png';
 
 export const Section = styled.section`
-    padding: 120px 24px 0;
+    padding: 144px 24px 0;
     width: 100%;
     position: relative;
-
     background: url(${bgStars}) no-repeat top center;
     background-size: 517px;
 
+
     @media(min-width:375px) {
-        padding: 120px 56px 0;
+        padding: 164px 56px 0;
     }
 
     @media(min-width:768px) {
@@ -23,6 +23,26 @@ export const Section = styled.section`
     @media(min-width:1024px) {
         padding: 220px 34% 0;
         background: url(${bgStars}) no-repeat top -200px center;
+    }
+
+    @media(min-width:1920px) {
+        padding: 220px 38% 0;
+    }
+`
+
+export const Container = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    #tsparticles {
+        height: 300px;
+
+        @media(min-width: 768px) {
+            height: 400px;
+        }
     }
 `
 
@@ -66,13 +86,17 @@ export const TitleBorder = styled.div`
     @media(min-width: 1024px) {
         width: calc(100% - 34%);
     }
+
+    @media(min-width:1920px) {
+        width: calc(100% - 38%);
+    }
     `
 
 export const ButtonArrow = styled.button`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 130px auto;
+    margin: 136px auto 84px;
     border: 0;
     background-color: transparent;
     z-index: 5;
