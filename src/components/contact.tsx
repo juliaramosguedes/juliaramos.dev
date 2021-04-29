@@ -6,6 +6,7 @@ import { LinkedinIn } from '@styled-icons/fa-brands/LinkedinIn';
 
 import theme from '../styles/theme';
 import {
+    Clouds,
     Container,
     Email,
     EmailIcon,
@@ -14,7 +15,9 @@ import {
     Planet,
     Section,
     SocialMedia,
+    Stars,
     Text,
+    Twinkling,
 } from '../styles/components/Contact';
 import { Separator, Title } from '../styles/components/Shared';
 import saturn from '../assets/saturn.png';
@@ -23,10 +26,13 @@ interface ContactProps {
     contactRef: RefObject<HTMLElement>
 }
 
-const Contact: React.FC<ContactProps> = ({contactRef}) => {
+const Contact: React.FC<ContactProps> = ({ contactRef }) => {
     return (
         <Section ref={contactRef}>
-            <Title color="white" bgColor={theme.colors.text}>Contato</Title>
+            <Stars/>
+            <Twinkling/>
+            <Clouds/>
+            <Title color="white">Contato</Title>
             <Container>
                 <Text>Você pode falar comigo através do email</Text>
                 <Email href="mailto:hi@juliaramos.dev" title="Email da Julia Ramos"><EmailIcon color="white"
