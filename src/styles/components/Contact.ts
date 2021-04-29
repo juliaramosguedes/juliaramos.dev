@@ -6,7 +6,7 @@ import theme from '../theme';
 
 export const Section = styled.section`
     background-color: ${theme.colors.text};
-    padding: 112px 32px 160px;
+    padding: 84px 32px 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,6 @@ export const Section = styled.section`
     color: white;
     width: 100%;
     position: relative;
-    min-height: 100vh;
 
     @media(min-width:768px) {
         padding: 112px 32px 36px;

@@ -16,11 +16,11 @@ export default createGlobalStyle`
   h1, h2, h3 {
       font-weight: 400;
       font-family: Roboto Condensed, sans-serif;
-      text-transform: uppercase;
   }
 
   h1 {
       font-size: 54px;
+      text-transform: uppercase;
 
       @media(min-width: 1024px) {
           font-size: 72px;
@@ -29,6 +29,7 @@ export default createGlobalStyle`
 
   h2 {
       font-size: 36px;
+      text-transform: uppercase;
 
       @media(min-width: 1024px) {
           font-size: 48px;
