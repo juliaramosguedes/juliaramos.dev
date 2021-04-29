@@ -76,6 +76,24 @@ export const ButtonArrow = styled.button`
     border: 0;
     background-color: transparent;
     z-index: 5;
+    animation: float 2s infinite ease;
+
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+            -webkit-transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(1.5rem);
+            -webkit-transform: translateY(1.5rem);
+        }
+
+        100% {
+            transform: translateY(0);
+            -webkit-transform: translateY(0);
+        }
+    }
 `
 
 export const WrapStar = styled.div`
