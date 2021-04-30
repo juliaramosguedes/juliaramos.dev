@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Head from 'next/head';
 
-import { AboutMe, Contact, Hi } from '../components';
+import { AboutMe, Contact, Hi, NavBar } from '../components';
 
 const Home: React.FC = () => {
     const hiRef = useRef();
@@ -23,6 +23,7 @@ const Home: React.FC = () => {
             <Head>
                 <title>Desenvolvedora Julia Ramos</title>
             </Head>
+            <NavBar refs={{ aboutMeRef, contactRef }} scroller={scroller} />
             <Hi hiRef={hiRef} contactScroller={() => scroller(aboutMeRef)} />
             <AboutMe aboutMeRef={aboutMeRef} />
             <Contact contactRef={contactRef} />

@@ -121,6 +121,7 @@ export const Email = styled.a`
     font-size: 32px;
     font-weight: bold;
     z-index: 1;
+    position: relative;
 
     p {
         margin-top: 8px;
@@ -144,6 +145,7 @@ export const FollowMe = styled(Container)`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     z-index: 3;
 
     @media(min-width:768px) {
