@@ -2,7 +2,16 @@ import styled from 'styled-components';
 
 import theme from '../theme';
 
+interface MenuProps {
+    checked: boolean
+}
+
 export const Nav = styled.nav`
+    position: fixed;
+    z-index: 10;
+`;
+
+export const Wrap = styled.div`
     position: fixed;
     top: 0;
     background-color: ${theme.colors.primary};
@@ -11,7 +20,7 @@ export const Nav = styled.nav`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
 
     svg {
         width: 48px;
@@ -35,6 +44,8 @@ export const BurgerMenu = styled.div`
         width: 60px;
         height: 60px;
         z-index: 5;
+        cursor: pointer;
+        position: relative;
     }
 
     .hamburguer {
@@ -87,19 +98,15 @@ export const BurgerMenu = styled.div`
         transform: rotate(90deg);
         bottom: 0;
     }
-
-    input:checked ~ ul {
-        transform: none;
-    }
 `;
 
 export const Menu = styled.ul`
-    position: absolute;
+    position: fixed;
     top: 100px;
     right: 0;
     width: 280px;
     margin: -100px 0 0;
-    padding: 72px 36px 36px;
+    padding: 72px 36px 0;
     background: white;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -111,8 +118,8 @@ export const Menu = styled.ul`
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 
     li {
-        padding: 36px 0;
-        font-size: 22px;
+        padding: 24px 0;
+        font-size: 21px;
         z-index: 4;
     }
 
@@ -126,4 +133,6 @@ export const Menu = styled.ul`
     a:hover {
         color: ${theme.colors.secondary};
     }
+
+    ${({ checked }: MenuProps) => checked && 'transform: none'};
 `;
