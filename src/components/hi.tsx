@@ -18,8 +18,8 @@ import Star from '../assets/star.svg';
 import DoubleArrow from '../assets/double-arrow.svg';
 
 interface HiProps {
-    contactScroller: Function
-    hiRef: RefObject<HTMLElement>
+    contactScroller: Function;
+    hiRef: RefObject<HTMLElement>;
 }
 
 const Hi: React.FC<HiProps> = ({ contactScroller, hiRef }) => {

@@ -4,7 +4,7 @@ import theme from '../theme';
 interface ISeparatorDTO {
     color?: string;
     transparent?: boolean;
-    height: string;
+    height?: string;
 }
 
 interface ITitleDTO {

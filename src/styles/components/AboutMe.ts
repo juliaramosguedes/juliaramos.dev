@@ -6,7 +6,6 @@ import juliaRamos from '../../assets/juliaramos.png';
 
 export const Section = styled.section`
     padding: 84px 24px;
-
     background: url(${bgStars}) no-repeat top right;
     background-size: 225px;
 
@@ -28,12 +27,12 @@ export const Wrap = styled.div`
 `;
 
 export const Texts = styled.div`
-    margin-top: 64px;
+    margin-top: 144px;
 
     @media (min-width: 768px) {
         order: 1;
         max-width: 400px;
-        margin-top: -64px;
+        margin-top: 0;
     }
 
     @media (min-width: 1024px) {
@@ -57,6 +56,7 @@ export const TitleBorderOutline = styled.div`
     background-color: white;
     z-index: 3;
     position: relative;
+    top: 64px;
     padding: 14px;
     margin: 0 auto;
 

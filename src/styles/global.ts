@@ -11,6 +11,7 @@ export default createGlobalStyle`
       background-color: ${(props) => props.theme.colors.background};
       color: ${(props) => props.theme.colors.text};
       font: 400 21px Roboto Condensed, sans-serif;
+      margin-top: 70px;
   }
 
   h1, h2, h3 {
@@ -47,6 +48,7 @@ export default createGlobalStyle`
   a {
       color: inherit;
       text-decoration: none;
+      cursor: pointer;
   }
 
   u {

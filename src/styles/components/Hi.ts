@@ -3,13 +3,12 @@ import styled from "styled-components";
 import theme from '../theme';
 import bgStars from '../../assets/bg-stars-1.png';
 
-export const Section = styled.section`
+export const Section = styled.header`
     padding: 144px 24px 0;
     width: 100%;
     position: relative;
     background: url(${bgStars}) no-repeat top center;
     background-size: 517px;
-
 
     @media(min-width:375px) {
         padding: 164px 56px 0;

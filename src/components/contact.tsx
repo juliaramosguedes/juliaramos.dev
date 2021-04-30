@@ -23,7 +23,7 @@ import { Separator, Title } from '../styles/components/Shared';
 import saturn from '../assets/saturn.png';
 
 interface ContactProps {
-    contactRef: RefObject<HTMLElement>
+    contactRef: RefObject<HTMLElement>;
 }
 
 const Contact: React.FC<ContactProps> = ({ contactRef }) => {
