@@ -26,6 +26,7 @@ export const Wrap = styled.div`
         width: 48px;
         height: 48px;
         margin-left: 24px;
+        stroke-width: 10px;
     }
 `;
 
