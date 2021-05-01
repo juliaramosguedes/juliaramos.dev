@@ -47,7 +47,7 @@ export default createGlobalStyle`
       cursor: pointer;
   }
 
-  u {
+  u, a {
       text-underline-position: under;
   }
 

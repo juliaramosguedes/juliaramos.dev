@@ -10,7 +10,7 @@ export const Section = styled.section`
     position: relative;
 
     @media (min-width: 768px) {
-        padding: 120px 24px;
+        padding: 120px 24px 164px;
         background-size: 489px 840px;
     }
 `;
@@ -92,6 +92,7 @@ export const Image = styled.div`
     }
 
     @media (min-width: 768px) {
+        bottom: 76px;
         width: 120px;
         height: 144px;
     }
@@ -111,8 +112,7 @@ export const Grid = styled.div`
     margin: 56px 0 16px;
     display: grid;
     grid-template-columns: 256px 256px 256px;
-    column-gap: 16px;
-    row-gap: 16px;
+    gap: 16px;
 
     overflow-x: scroll;
     -ms-overflow-style: none;
