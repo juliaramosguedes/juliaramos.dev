@@ -44,14 +44,6 @@ export const Flex = styled.div`
     }
 `;
 
-export const Card = styled.div`
-    max-width: 300px;
-
-    @media (min-width: 1024px) {
-        max-width: 450px;
-    }
-`;
-
 export const Button = styled.button`
     border: 1px solid #ffffff;
     background-color: transparent;

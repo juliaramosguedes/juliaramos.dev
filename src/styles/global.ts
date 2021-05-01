@@ -38,11 +38,7 @@ export default createGlobalStyle`
   }
 
   h3 {
-      font-size: 28px;
-
-      @media(min-width: 1024px) {
-          font-size: 24px;
-      }
+      font-size: 24px;
   }
 
   a {
