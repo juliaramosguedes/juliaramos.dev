@@ -1,54 +1,27 @@
 import styled from 'styled-components';
 
-import theme from '../theme';
+import { Title as BaseTitle } from './Shared';
 
 export const Section = styled.section`
-    padding: 84px 24px 144px;
-
-    @media (min-width: 768px) {
-        padding: 164px 24px 144px;
-    }
-`;
-
-export const Wrap = styled.div`
-    max-width: 800px;
+    padding: 84px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 0 auto;
-    position: relative;
-`;
-
-export const Title = styled.h1`
-    z-index: 3;
-    position: absolute;
-    bottom: -5px;
-    left: 14px;
-    line-height: 80px;
-    color: ${theme.colors.primary};
-
-    @media(min-width: 768px) {
-        font-weight: bold;
-    }
-`;
-
-export const TitleBorderOutline = styled.div`
-    width: 100%;
-    height: 82px;
-    border: 5px solid ${theme.colors.primary};
-    background-color: white;
-    z-index: 3;
-    position: relative;
-    top: 0;
-    padding: 14px;
 
     @media (min-width: 768px) {
-        position: absolute;
-        max-width: 235px;
-        right: 0;
-        top: -124px;
+        padding: 144px 24px;
+        max-width: 580px;
     }
 
     @media (min-width: 1024px) {
-        max-width: 300px;
+        max-width: 850px;
     }
+`;
+
+export const Title = styled(BaseTitle)`
+    align-self: flex-end;
 `;
 
 export const Grid = styled.div`
@@ -73,8 +46,6 @@ export const Grid = styled.div`
 export const MoreArticles = styled.div`
     margin: 36px 0 0;
     font-size: 24px;
-    display: flex;
-    justify-content: center;
 
     a {
         text-decoration: underline;

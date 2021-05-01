@@ -105,13 +105,13 @@ export const Slogan = styled.div`
     @media (min-width: 768px) {
         order: 2;
         position: absolute;
-        top: 48px;
+        top: 112px;
         right: 15px;
         max-width: 220px;
     }
 
     @media (min-width: 1024px) {
-        top: 48px;
+        top: 110px;
         right: 8px;
         max-width: 320px;
     }

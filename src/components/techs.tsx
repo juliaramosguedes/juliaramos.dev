@@ -14,7 +14,7 @@ const Techs: React.FC<AboutMeProps> = ({ techsRef }) => {
         <Section ref={techsRef}>
             <Wrap>
                 <TitleBorderOutline>
-                    <Title><strong>Tecno </strong>logias</Title>
+                    <Title><strong>Tecno&nbsp;</strong>logias</Title>
                 </TitleBorderOutline>
                 <Text>
                     Sou desenvolvedora web full stack, apaixonada por Javascript e sua stack.

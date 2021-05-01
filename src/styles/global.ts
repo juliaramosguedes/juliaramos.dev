@@ -32,8 +32,8 @@ export default createGlobalStyle`
       font-size: 36px;
       text-transform: uppercase;
 
-      @media(min-width: 1024px) {
-          font-size: 48px;
+      @media(min-width: 768px) {
+          font-size: 54px;
       }
   }
 
