@@ -1,12 +1,13 @@
 import React, { useRef } from 'react';
 import Head from 'next/head';
 
-import { AboutMe, Contact, Hi, NavBar, Techs } from '../components';
+import { AboutMe, Articles, Contact, Hi, NavBar, Techs } from '../components';
 
 const Home: React.FC = () => {
     const hiRef = useRef();
-    const contactRef = useRef(null);
     const aboutMeRef = useRef(null);
+    const articlesRef = useRef(null);
+    const contactRef = useRef(null);
     const techsRef = useRef(null);
 
     const scroller = (ref) => {
@@ -24,10 +25,11 @@ const Home: React.FC = () => {
             <Head>
                 <title>Desenvolvedora Julia Ramos</title>
             </Head>
-            <NavBar refs={{ aboutMeRef, contactRef, techsRef }} scroller={scroller} />
+            <NavBar refs={{ aboutMeRef, articlesRef, contactRef, techsRef }} scroller={scroller} />
             <Hi hiRef={hiRef} contactScroller={() => scroller(aboutMeRef)} />
             <AboutMe aboutMeRef={aboutMeRef} />
             <Techs techsRef={techsRef} />
+            <Articles articlesRef={articlesRef} />
             <Contact contactRef={contactRef} />
         </>
     );

@@ -90,9 +90,14 @@ export const Title = styled.h2`
         background-color: ${bgColor || 'transparent'};`
     }
     width: 100%;
-    max-width: 380px;
-    padding: 16px;
     z-index: 2;
+    padding: 14px;
+
+    @media(min-width: 768px) {
+        font-weight: bold;
+        max-width: 260px;
+        padding: 0;
+    }
 `;
 
 export const Separator = styled.div`

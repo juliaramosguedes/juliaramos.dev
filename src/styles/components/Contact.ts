@@ -18,7 +18,7 @@ export const Section = styled.section`
     position: relative;
 
     @media(min-width:768px) {
-        padding: 112px 32px 36px;
+        padding: 144px 32px 36px;
     }
 `
 
