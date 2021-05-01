@@ -124,14 +124,18 @@ export const Menu = styled.ul`
         z-index: 4;
     }
 
-    a {
-        text-decoration: none;
+    button {
+        border: 0;
+        background-color: transparent;
         color: ${theme.colors.primary};
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
         transition: color 0.3s ease;
         z-index: 4;
     }
 
-    a:hover {
+    button:hover {
         color: ${theme.colors.secondary};
     }
 

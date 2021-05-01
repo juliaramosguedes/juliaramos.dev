@@ -24,7 +24,7 @@ const Home: React.FC = () => {
     return (
         <>
             <Head>
-                <title>Desenvolvedora Julia Ramos</title>
+                <title>Julia Ramos, desenvolvedora e professora</title>
             </Head>
             <NavBar refs={{ aboutMeRef, articlesRef, contactRef, projectsRef, techsRef }} scroller={scroller} />
             <Hi hiRef={hiRef} contactScroller={() => scroller(aboutMeRef)} />

@@ -59,7 +59,7 @@ const Contact: React.FC<ContactProps> = ({ contactRef }) => {
                     >Julia Ramos</a>
                 </Text>
                 <Text>&copy; Copyright 2021 - Todos os direitos reservados</Text>
-                <Planet src={saturn}/>
+                <Planet src={saturn} title="Planeta com anel" alt="Planeta com anel, como Saturno" />
             </Footer>
         </Section>
     );

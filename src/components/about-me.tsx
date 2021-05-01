@@ -22,7 +22,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ aboutMeRef }) => {
         <Section ref={aboutMeRef}>
             <Wrap>
                 <TitleBorderOutline>
-                    <Title><strong>Sobre</strong><br/>mim</Title>
+                    <Title><strong>Sobre</strong><br/> mim</Title>
                     <ImageFrame/>
                 </TitleBorderOutline>
                 <Texts>

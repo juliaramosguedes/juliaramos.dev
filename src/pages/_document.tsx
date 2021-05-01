@@ -42,7 +42,8 @@ export default class MyDocument extends Document {
                     <meta name="robots" content="index, follow"/>
                     <meta
                         name="description"
-                        content="Julia Ramos, engenheira de software full stack e professora. Conheça meu trabalho."
+                        content="Sou engenheira de software na Pitágoras Ampli, uma startup da Kroton Educacional, e professora
+                        assistente de desenvolvimento web na Digital House Brasil. Conheça meu trabalho."
                     />
                     <meta name="author" content="Julia Ramos"/>
                 </Head>

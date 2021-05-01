@@ -17,12 +17,16 @@ interface NavBarProps {
     };
 }
 
-const NavBar: React.FC<NavBarProps> = ({ refs: { aboutMeRef, articlesRef, contactRef, projectsRef, techsRef }, scroller }) => {
+const NavBar: React.FC<NavBarProps> = ({
+    refs: { aboutMeRef, articlesRef, contactRef, projectsRef, techsRef },
+    scroller,
+}) => {
     const [checked, setChecked] = useState(false);
 
     const onClick = useCallback((ref) => {
         scroller(ref);
         setChecked(false);
+        return false;
     }, []);
 
     return (
@@ -40,25 +44,35 @@ const NavBar: React.FC<NavBarProps> = ({ refs: { aboutMeRef, articlesRef, contac
                 </BurgerMenu>
             </Wrap>
             <Menu checked={checked}>
-                <a onClick={() => onClick(aboutMeRef)}>
-                    <li>Sobre mim</li>
-                </a>
+                <li>
+                    <button title="Ir para a seção Sobre mim" onClick={() => onClick(aboutMeRef)}>
+                        Sobre mim
+                    </button>
+                </li>
                 <Separator color={theme.colors.primary}/>
-                <a onClick={() => onClick(techsRef)}>
-                    <li>Tecnologias</li>
-                </a>
+                <li>
+                    <button title="Ir para a seção Tecnologias" onClick={() => onClick(techsRef)}>
+                        Tecnologias
+                    </button>
+                </li>
                 <Separator color={theme.colors.primary}/>
-                <a onClick={() => onClick(projectsRef)}>
-                    <li>Projetos</li>
-                </a>
+                <li>
+                    <button title="Ir para a seção Projetos" onClick={() => onClick(projectsRef)}>
+                        Projetos
+                    </button>
+                </li>
                 <Separator color={theme.colors.primary}/>
-                <a onClick={() => onClick(articlesRef)}>
-                    <li>Artigos</li>
-                </a>
+                <li>
+                    <button title="Ir para a seção Artigos" onClick={() => onClick(articlesRef)}>
+                        Artigos
+                    </button>
+                </li>
                 <Separator color={theme.colors.primary}/>
-                <a onClick={() => onClick(contactRef)}>
-                    <li>Contato</li>
-                </a>
+                <li>
+                    <button title="Ir para a seção Contato" onClick={() => onClick(contactRef)}>
+                        Contato
+                    </button>
+                </li>
             </Menu>
         </Nav>
     );

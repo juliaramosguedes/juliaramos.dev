@@ -33,7 +33,7 @@ const CustomArrow = ({ direction, Icon, ...props }) => {
     } = props;
 
     return (
-        <CustomArrowStyle direction={direction} {...restProps}>
+        <CustomArrowStyle direction={direction} {...restProps} aria-label={`Navegar para ${direction === 'right' ? 'direita' : 'esquerda'}`}>
             <Icon size="40px" color={theme.colors.text}/>
         </CustomArrowStyle>
     );
@@ -68,8 +68,8 @@ const Projects: React.FC<ProjectsProps> = ({ projectsRef }) => {
                 `Nesse projeto, eu fiquei responsável pelo desenvolvimento (com React e Firebase), o Dedicio Coelho por UI e a Poliana Branti por UX.`,
             ],
             buttons: [
-                { text: 'Github', onClick: () => window.open('https://github.com/juliaramosguedes/tictask') },
-                { text: 'Ir para o site', onClick: () => window.open('https://www.tictask.app/') },
+                { text: 'Github', url:'https://github.com/juliaramosguedes/tictask' },
+                { text: 'Ir para o site', url:'https://www.tictask.app/' },
             ],
         },
         {
@@ -82,8 +82,8 @@ const Projects: React.FC<ProjectsProps> = ({ projectsRef }) => {
             buttons: [
                 {
                     text: 'Github',
-                    onClick: () => window.open('https://github.com/juliaramosguedes/project-voluntei-ecommerce'),
-                }, { text: 'Ir para o site', onClick: () => window.open('https://voluntei.juliaramos.dev/') },
+                    url:'https://github.com/juliaramosguedes/project-voluntei-ecommerce',
+                }, { text: 'Ir para o site', url:'https://voluntei.juliaramos.dev/' },
             ],
         },
         {
@@ -93,13 +93,13 @@ const Projects: React.FC<ProjectsProps> = ({ projectsRef }) => {
                 `Nesse projeto utilizei os conhecimentos que adquiri após 1 mês de curso de HTML, CSS, Bootstrap, Javascript, Git e Github.`,
                 `Amante de RPG de mesa desde a infância, eu apresento minha versão web de Dungeons & Dragons.`,
                 `Minha intenção é proporcionar uma experiência semelhante ao jogo original para os jogadores online, ao recriar a atmosfera do jogo e conduzir a imaginação do jogador para uma imersão na personagem e na história.`,
-                `objetivo de ter criado o jogo é despertar a curiosidade do jogador em conhecer a versão tradicional.`,
+                `O objetivo de ter criado o jogo é despertar a curiosidade do jogador em conhecer a versão tradicional.`,
             ],
             buttons: [
                 {
                     text: 'Github',
-                    onClick: () => window.open('https://github.com/juliaramosguedes/project-dungeons-dragons'),
-                }, { text: 'Ir para o site', onClick: () => window.open('https://rpg.juliaramos.dev/') },
+                    url:'https://github.com/juliaramosguedes/project-dungeons-dragons',
+                }, { text: 'Ir para o site', url:'https://rpg.juliaramos.dev/' },
             ],
         },
     ];
@@ -111,10 +111,20 @@ const Projects: React.FC<ProjectsProps> = ({ projectsRef }) => {
                     <h3>{project}</h3>
                     {description.map((text, index) => (<p
                         key={`${project.replace(' ', '-')}-description-${index}`}>{text}</p>))}
-                    {buttons.map(({ text, onClick }) => {
+                    {buttons.map(({ text, onClick, url }) => {
                         const key = `${text} do projeto ${project}`;
                         return (
-                            <Button onClick={onClick} title={key} key={key}>{text}</Button>
+                            <>
+                                {url && !onClick ?
+                                    <a href={url} title={key} key={key}>
+                                        <Button>
+                                            {text}
+                                        </Button>
+                                    </a>
+                                    :
+                                    <Button onClick={onClick} title={key} key={key}>{text}</Button>
+                                }
+                            </>
                         );
                     })}
                 </Card>

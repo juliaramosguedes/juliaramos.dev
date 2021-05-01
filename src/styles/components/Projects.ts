@@ -83,7 +83,7 @@ export const Card = styled.div`
         max-width: 535px;
         margin: 0 auto;
 
-        button + button {
+        a + a {
             margin-left: 16px;
         }
     }

@@ -28,12 +28,12 @@ export const Text = styled.p`
     }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
     z-index: 3;
     position: absolute;
     bottom: -5px;
     left: 14px;
-    line-height: 80px;
+    line-height: 60px;
     color: ${theme.colors.primary};
 
     strong {
@@ -46,15 +46,11 @@ export const Title = styled.h1`
             display: inline;
         }
     }
-
-    @media (min-width: 1024px) {
-        left: -215px;
-    }
 `;
 
 export const TitleBorderOutline = styled.div`
-    width: 200px;
-    height: 82px;
+    width: 145px;
+    height: 63px;
     border: 5px solid ${theme.colors.primary};
     background-color: white;
     z-index: 3;
@@ -68,11 +64,6 @@ export const TitleBorderOutline = styled.div`
         order: 2;
         width: 180px;
         margin-bottom: 36px;
-    }
-
-    @media (min-width: 1024px) {
-        right: -215px;
-        width: 240px;
     }
 `;
 
