@@ -141,10 +141,10 @@ const Hi: React.FC<HiProps> = ({ contactScroller, hiRef }) => {
             <TitleBorderOutline>
                 <ParagraphNoMargin>Olá, eu sou a</ParagraphNoMargin>
                 <Title>Julia<br/><ColorWhite>Ramos.</ColorWhite></Title>
-                <Image src={bluePlanet} right="-80px" bottom="-20px"/>
+                <Image src={bluePlanet} right="-80px" bottom="-20px" title="Planeta azul" alt="Planeta azul"/>
             </TitleBorderOutline>
             <TitleBorder>
-                <Image src={pinkPlanet} left="-40px" bottom="-30px"/>
+                <Image src={pinkPlanet} left="-40px" bottom="-30px" title="Planeta rosa" alt="Planeta rosa"/>
                 <WrapStar>
                     <Star/>
                 </WrapStar>
