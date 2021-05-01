@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Title as BaseTitle } from './Shared';
+import theme from '../theme';
 
 export const Section = styled.section`
     padding: 84px 24px;
@@ -50,5 +51,10 @@ export const MoreArticles = styled.div`
     a {
         text-decoration: underline;
         font-weight: bold;
+        transition: color 0.5s;
+    }
+
+    a:hover {
+        color: ${theme.colors.secondary};
     }
 `

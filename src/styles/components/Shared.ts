@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { lighten } from 'polished';
+
 import theme from '../theme';
 
 interface ISeparatorDTO {
@@ -28,37 +30,24 @@ export const Section = styled.section`
     }
 `;
 
-export const Container = styled.div`
-    max-width: 1076px;
-    margin: 0 auto;
-`;
-
-export const Flex = styled.div`
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
+export const Button = styled.button`
+    border: 1px solid ${theme.colors.primary};
+    background-color: transparent;
+    padding: 8px;
+    color: ${theme.colors.primary};
+    margin: 24px 0 0;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.8s;
     width: 100%;
 
-    @media (min-width: 768px) {
-        flex-flow: row nowrap;
+    &:hover {
+        background-color: ${lighten(0.3, theme.colors.primary)};
+        color: white;
     }
-`;
 
-export const Button = styled.button`
-    border: 1px solid #ffffff;
-    background-color: transparent;
-    padding: 12px 32px;
-    color: #ffffff;
-    margin: 24px 0 64px;
-    font-size: 16px;
-    text-align: center;
-    max-width: 270px;
-    transition: border 0.5s;
-    transition: color 0.3s;
-
-    & :hover {
-        border: 1px solid #FFD500;
-        color: #FFD500;
+    @media(min-width: 768px) {
+        max-width: 160px;
     }
 `;
 
@@ -68,14 +57,6 @@ export const ColorWhite = styled.span`
 
 export const ColorYellow = styled.span`
     color: ${theme.colors.secondary}
-`;
-
-export const ColorPurple = styled.span`
-    color: ${theme.colors.primary}
-`;
-
-export const ColorGray = styled.span`
-    color: ${theme.colors.textLight}
 `;
 
 export const ParagraphNoMargin = styled.p`

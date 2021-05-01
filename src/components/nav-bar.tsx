@@ -12,11 +12,12 @@ interface NavBarProps {
         aboutMeRef: RefObject<HTMLElement>;
         articlesRef: RefObject<HTMLElement>;
         contactRef: RefObject<HTMLElement>;
+        projectsRef: RefObject<HTMLElement>;
         techsRef: RefObject<HTMLElement>;
     };
 }
 
-const NavBar: React.FC<NavBarProps> = ({ refs: { aboutMeRef, articlesRef, contactRef, techsRef }, scroller }) => {
+const NavBar: React.FC<NavBarProps> = ({ refs: { aboutMeRef, articlesRef, contactRef, projectsRef, techsRef }, scroller }) => {
     const [checked, setChecked] = useState(false);
 
     const onClick = useCallback((ref) => {
@@ -45,6 +46,10 @@ const NavBar: React.FC<NavBarProps> = ({ refs: { aboutMeRef, articlesRef, contac
                 <Separator color={theme.colors.primary}/>
                 <a onClick={() => onClick(techsRef)}>
                     <li>Tecnologias</li>
+                </a>
+                <Separator color={theme.colors.primary}/>
+                <a onClick={() => onClick(projectsRef)}>
+                    <li>Projetos</li>
                 </a>
                 <Separator color={theme.colors.primary}/>
                 <a onClick={() => onClick(articlesRef)}>

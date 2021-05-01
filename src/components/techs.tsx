@@ -5,11 +5,11 @@ import Card from './card';
 
 import moon from '../assets/moon.png';
 
-interface AboutMeProps {
+interface TechsProps {
     techsRef: RefObject<HTMLElement>
 }
 
-const Techs: React.FC<AboutMeProps> = ({ techsRef }) => {
+const Techs: React.FC<TechsProps> = ({ techsRef }) => {
     return (
         <Section ref={techsRef}>
             <Wrap>
