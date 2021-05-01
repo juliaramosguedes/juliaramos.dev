@@ -23,13 +23,13 @@ const Techs: React.FC<AboutMeProps> = ({ techsRef }) => {
                 </Text>
                 <Grid>
                     <Card>HTML, CSS, Bootstrap, <br/>Git, Github</Card>
-                    <Card>Javascript, Typescript, <br/>Python, Kotlin</Card>
-                    <Card>React, Firebase, Node, Express, <br/>Next, Jest</Card>
                     <Card>Docker, <br/>MongoDB, <br/>MySql, <br/>Postgres</Card>
+                    <Card>Programação funcional, Programação orientada a objetos</Card>
+                    <Card>Javascript, Typescript, <br/>Python, Kotlin</Card>
                     <Card>Mongoose, <br/>TypeORM, SqlAlchemy, Springboot</Card>
-                    <Card>REST, <br/>Protocol Buffer, <br/>gRPC, <br/>GraphQL</Card>
                     <Card>Desenvolvimento orientado a testes</Card>
-                    <Card>Programação funcional, programação orientada a objetos</Card>
+                    <Card>React, Firebase, Node, Express, <br/>Next, Jest</Card>
+                    <Card>REST, <br/>Protocol Buffer, <br/>gRPC, <br/>GraphQL</Card>
                     <Card>Domain-driven design, <br/>Model–view–controller</Card>
                 </Grid>
                 <Card alignCenter>Metodologias ágeis</Card>
