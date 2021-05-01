@@ -78,13 +78,14 @@ export const Card = styled.div`
         margin-bottom: 24px;
     }
 
-    button + button {
-        margin-left: 16px;
-    }
 
     @media(min-width: 768px) {
         max-width: 535px;
         margin: 0 auto;
+
+        button + button {
+            margin-left: 16px;
+        }
     }
 `
 

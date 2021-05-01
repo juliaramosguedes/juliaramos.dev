@@ -52,19 +52,21 @@ const Projects: React.FC<ProjectsProps> = ({ projectsRef }) => {
     const descriptions = [
         {
             project: 'Consultoria Educação',
-            description: `O Consultoria Educação é uma plataforma de vendas de cursos de graduação, que paga premiações em dinheiro pelas matrículas realizadas.
-Eu participei do desenvolvimento desse projeto para a Kroton desde o seu início, atuando sozinha sob a supervisão do Marcio Hariki.
-O projeto foi desenvolvido com React e BaaS (Backend as a Service) com Node e Firebase (Authentication, Firestore, Functions), hospedado na AWS. Foram criadas uma landing page e uma área logada com dashboard, entre outras coisas.
-Atualmente, não faço mais parte do desenvolvimento do projeto. Por isso optei por não divulgar o link, já que o projeto atual já foi modificado. Compartilho com vocês os registros do projeto de quando ainda era responsável pelo seu desenvolvimento.
-`,
+            description: [
+                `O Consultoria Educação é uma plataforma de vendas de cursos de graduação, que paga premiações em dinheiro pelas matrículas realizadas.`,
+                `Eu participei do desenvolvimento desse projeto para a Kroton desde o seu início, atuando sozinha sob a supervisão do Marcio Hariki.`,
+                `O projeto foi desenvolvido com React e BaaS (Backend as a Service) com Node e Firebase (Authentication, Firestore, Functions), hospedado na AWS. Foram criadas uma landing page e uma área logada com dashboard, entre outras coisas.`,
+                `Atualmente, não faço mais parte do desenvolvimento do projeto. Por isso optei por não divulgar o link, já que o projeto atual já foi modificado. Compartilho com vocês os registros do projeto de quando ainda era responsável pelo seu desenvolvimento.`,
+            ],
             buttons: [{ text: 'Ver vídeo', onClick: toggleModal }],
         },
         {
             project: 'Tic Task',
-            description: `O Tic Task é um web app para você usar a técnica Pomodoro como forma de aumentar a produtividade nos estudos e trabalho.
-A ideia desse projeto surgiu da necessidade de uma ferramenta para melhorar o desempenho nos meus estudos combinada à vontade de desenvolver um novo projeto.
-Nesse projeto, eu fiquei responsável pelo desenvolvimento (com React e Firebase), o Dedicio Coelho por UI e a Poliana Branti por UX.
-`,
+            description: [
+                `O Tic Task é um web app para você usar a técnica Pomodoro como forma de aumentar a produtividade nos estudos e trabalho.`,
+                `A ideia desse projeto surgiu da necessidade de uma ferramenta para melhorar o desempenho nos meus estudos combinada à vontade de desenvolver um novo projeto.`,
+                `Nesse projeto, eu fiquei responsável pelo desenvolvimento (com React e Firebase), o Dedicio Coelho por UI e a Poliana Branti por UX.`,
+            ],
             buttons: [
                 { text: 'Github', onClick: () => window.open('https://github.com/juliaramosguedes/tictask') },
                 { text: 'Ir para o site', onClick: () => window.open('https://www.tictask.app/') },
@@ -72,9 +74,11 @@ Nesse projeto, eu fiquei responsável pelo desenvolvimento (com React e Firebase
         },
         {
             project: 'Voluntei',
-            description: `Como projeto de conclusão do bootcamp na Ironhack, em conjunto com mais dois amigos (Luan Perosa e Marcus Brandão), criamos um e-commerce fictício.
-Utilizamos o conhecimento adquirido ao longo dos seis meses de curso de HTML, CSS, Bootstrap, Javascript, Node, React, Git e Github e, ao invés de utilizar o que aprendemos de Express, Mongo e Mongoose, nos desafiamos a aprender e implementar BaaS (Backend as a Service) Firebase, além dos meios de pagamento PayPal e Nano.
-Esse projeto foi muito importante para o nosso desenvolvimento profissional. Solidificamos nossos conhecimentos, aprendemos novas tecnologias, trabalhamos em equipe, exercitamos a resiliência tão essencial para o trabalho de um desenvolvedor e o resultado foi surpreendente, ficando entre os 3 melhores.`,
+            description: [
+                `Como projeto de conclusão do bootcamp na Ironhack, em conjunto com mais dois amigos (Luan Perosa e Marcus Brandão), criamos um e-commerce fictício.`,
+                `Utilizamos o conhecimento adquirido ao longo dos seis meses de curso de HTML, CSS, Bootstrap, Javascript, Node, React, Git e Github e, ao invés de utilizar o que aprendemos de Express, Mongo e Mongoose, nos desafiamos a aprender e implementar BaaS (Backend as a Service) Firebase, além dos meios de pagamento PayPal e Nano.`,
+                `Esse projeto foi muito importante para o nosso desenvolvimento profissional. Solidificamos nossos conhecimentos, aprendemos novas tecnologias, trabalhamos em equipe, exercitamos a resiliência tão essencial para o trabalho de um desenvolvedor e o resultado foi surpreendente, ficando entre os 3 melhores.`,
+            ],
             buttons: [
                 {
                     text: 'Github',
@@ -84,12 +88,13 @@ Esse projeto foi muito importante para o nosso desenvolvimento profissional. Sol
         },
         {
             project: 'Dungeons & Dragons',
-            description: `Esse projeto é meu xodózinho, pois é o meu primeiro site. Eu comecei o bootcamp na Ironhack partindo do zero e como meu primeiro projeto, criei um jogo web em javascript que simula uma partida de RPG de mesa.
-Nesse projeto utilizei os conhecimentos que adquiri após 1 mês de curso de HTML, CSS, Bootstrap, Javascript, Git e Github.
-Amante de RPG de mesa desde a infância, eu apresento minha versão web de Dungeons & Dragons.
-Minha intenção é proporcionar uma experiência semelhante ao jogo original para os jogadores online, ao recriar a atmosfera do jogo e conduzir a imaginação do jogador para uma imersão na personagem e na história.
-O objetivo de ter criado o jogo é despertar a curiosidade do jogador em conhecer a versão tradicional.
-`,
+            description: [
+                `Esse projeto é meu xodózinho, pois é o meu primeiro site. Eu comecei o bootcamp na Ironhack partindo do zero e como meu primeiro projeto, criei um jogo web em javascript que simula uma partida de RPG de mesa.`,
+                `Nesse projeto utilizei os conhecimentos que adquiri após 1 mês de curso de HTML, CSS, Bootstrap, Javascript, Git e Github.`,
+                `Amante de RPG de mesa desde a infância, eu apresento minha versão web de Dungeons & Dragons.`,
+                `Minha intenção é proporcionar uma experiência semelhante ao jogo original para os jogadores online, ao recriar a atmosfera do jogo e conduzir a imaginação do jogador para uma imersão na personagem e na história.`,
+                `objetivo de ter criado o jogo é despertar a curiosidade do jogador em conhecer a versão tradicional.`,
+            ],
             buttons: [
                 {
                     text: 'Github',
@@ -104,12 +109,13 @@ O objetivo de ter criado o jogo é despertar a curiosidade do jogador em conhece
             <Box key={`description-card-${index}`}>
                 <Card>
                     <h3>{project}</h3>
-                    <p>{description}</p>
+                    {description.map((text, index) => (<p
+                        key={`${project.replace(' ', '-')}-description-${index}`}>{text}</p>))}
                     {buttons.map(({ text, onClick }) => {
                         const key = `${text} do projeto ${project}`;
                         return (
                             <Button onClick={onClick} title={key} key={key}>{text}</Button>
-                        )
+                        );
                     })}
                 </Card>
             </Box>
