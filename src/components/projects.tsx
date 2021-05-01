@@ -1,4 +1,4 @@
-import React, { RefObject } from 'react';
+import React, { useRef, useState, RefObject } from 'react';
 import { ArrowIosBackOutline } from '@styled-icons/evaicons-outline/ArrowIosBackOutline';
 import { ArrowIosForwardOutline } from '@styled-icons/evaicons-outline/ArrowIosForwardOutline';
 import Carousel from 'react-multi-carousel';
@@ -6,11 +6,8 @@ import 'react-multi-carousel/lib/styles.css';
 
 import { Box, Card, CustomArrow as CustomArrowStyle, Dot, Section, Wrap } from '../styles/components/Projects';
 import { Button, Title } from '../styles/components/Shared';
+import Modal from './modal';
 import theme from '../styles/theme';
-
-interface ProjectsProps {
-    projectsRef: RefObject<HTMLElement>
-}
 
 const CustomDots = (props) => {
     const { carouselState, onClick, active, ...restProps } = props;
@@ -42,7 +39,16 @@ const CustomArrow = ({ direction, Icon, onClick, ...props }) => {
     );
 };
 
+interface ProjectsProps {
+    projectsRef: RefObject<HTMLElement>
+}
+
 const Projects: React.FC<ProjectsProps> = ({ projectsRef }) => {
+    const [showModal, setShowModal] = useState(false);
+    const modalRef = useRef(null);
+
+    const toggleModal = () => setShowModal(!showModal);
+
     const descriptions = [
         {
             project: 'Consultoria Educação',
@@ -51,7 +57,7 @@ Eu participei do desenvolvimento desse projeto para a Kroton desde o seu início
 O projeto foi desenvolvido com React e BaaS (Backend as a Service) com Node e Firebase (Authentication, Firestore, Functions), hospedado na AWS. Foram criadas uma landing page e uma área logada com dashboard, entre outras coisas.
 Atualmente, não faço mais parte do desenvolvimento do projeto. Por isso optei por não divulgar o link, já que o projeto atual já foi modificado. Compartilho com vocês os registros do projeto de quando ainda era responsável pelo seu desenvolvimento.
 `,
-            buttons: [{ text: 'Ver vídeo', onClick: () => {} }],
+            buttons: [{ text: 'Ver vídeo', onClick: toggleModal }],
         },
         {
             project: 'Tic Task',
@@ -99,9 +105,12 @@ O objetivo de ter criado o jogo é despertar a curiosidade do jogador em conhece
                 <Card>
                     <h3>{project}</h3>
                     <p>{description}</p>
-                    {buttons.map(({ text, onClick }) => (
-                        <Button onClick={onClick} title={`${text} do projeto ${project}`}>{text}</Button>
-                    ))}
+                    {buttons.map(({ text, onClick }) => {
+                        const key = `${text} do projeto ${project}`;
+                        return (
+                            <Button onClick={onClick} title={key} key={key}>{text}</Button>
+                        )
+                    })}
                 </Card>
             </Box>
         ));
@@ -139,6 +148,13 @@ O objetivo de ter criado o jogo é despertar a curiosidade do jogador em conhece
                 >
                     {TestmonialCards()}
                 </Carousel>
+                {showModal &&
+                <Modal close={toggleModal} modalRef={modalRef} title="Projeto Consultoria Educação">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OrtZi4Ei_7U"
+                            title="Video do projeto Consultoria Educação" frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen></iframe>
+                </Modal>}
             </Wrap>
         </Section>
     );
