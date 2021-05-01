@@ -25,7 +25,7 @@ const CustomDots = (props) => {
     );
 };
 
-const CustomArrow = ({ direction, Icon, onClick, ...props }) => {
+const CustomArrow = ({ direction, Icon, ...props }) => {
     const {
         onMove,
         carouselState: { currentSlide, deviceType },
@@ -33,7 +33,7 @@ const CustomArrow = ({ direction, Icon, onClick, ...props }) => {
     } = props;
 
     return (
-        <CustomArrowStyle direction={direction} {...restProps} onClick={() => onClick()}>
+        <CustomArrowStyle direction={direction} {...restProps}>
             <Icon size="40px" color={theme.colors.text}/>
         </CustomArrowStyle>
     );

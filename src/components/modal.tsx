@@ -1,4 +1,4 @@
-import React, { RefObject } from 'react';
+import React, { MouseEventHandler, Ref } from 'react';
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';
 
 import { Header, Modal as ModalStyle, ModalBackdrop } from '../styles/components/Modal';
@@ -6,8 +6,8 @@ import theme from '../styles/theme';
 import { Separator } from '../styles/components/Shared';
 
 interface ModalProps {
-    modalRef: RefObject<HTMLElement>;
-    close: Function;
+    modalRef: Ref<HTMLDivElement>;
+    close: MouseEventHandler<HTMLDivElement | HTMLButtonElement>;
     title: string;
 }
 

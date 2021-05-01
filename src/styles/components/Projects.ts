@@ -57,8 +57,10 @@ export const Dot = styled.div`
     }
 
     &.active {
+        padding: 3px;
+        border: 2px solid ${theme.colors.primary};
         div {
-          background-color: ${theme.colors.primary};
+            background-color: ${theme.colors.primary};
         }
     }
 `
