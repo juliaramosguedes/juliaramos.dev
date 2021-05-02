@@ -13,7 +13,7 @@ interface WebSiteProps {
 
 const WebSite: React.FC<WebSiteProps> = ({ Icon, url, title, children }) => {
     return (
-        <a href={url} title={title} aria-label={title}>
+        <a href={url} title={title}>
             <WebSiteStyle>
                 <WebPage/>
                 {Icon && <Icon size="30px" color={theme.colors.text} />}

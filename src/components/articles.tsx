@@ -1,7 +1,6 @@
 import React, { RefObject } from 'react';
 
 import { Grid, MoreArticles, Section, Title } from '../styles/components/Articles';
-// import { Title } from '../styles/components/Shared';
 import { CursorClick } from '@styled-icons/heroicons-solid/CursorClick';
 import { Calendar } from '@styled-icons/boxicons-regular/Calendar';
 import { PeopleFill } from '@styled-icons/bootstrap/PeopleFill';
@@ -11,11 +10,11 @@ import { MapsHomeWork } from '@styled-icons/material-rounded/MapsHomeWork';
 import WebSite from './web-site';
 import theme from '../styles/theme';
 
-interface AboutMeProps {
+interface ArticlesProps {
     articlesRef: RefObject<HTMLElement>
 }
 
-const Techs: React.FC<AboutMeProps> = ({ articlesRef }) => {
+const Articles: React.FC<ArticlesProps> = ({ articlesRef }) => {
     return (
         <Section ref={articlesRef}>
             <Title color={theme.colors.primary}>Artigos</Title>
@@ -51,4 +50,4 @@ const Techs: React.FC<AboutMeProps> = ({ articlesRef }) => {
     );
 };
 
-export default Techs;
+export default Articles;

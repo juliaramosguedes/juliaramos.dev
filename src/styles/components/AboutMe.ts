@@ -40,18 +40,22 @@ export const Texts = styled.div`
     }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
     z-index: 3;
     position: absolute;
     bottom: -5px;
     left: 14px;
-    line-height: 80px;
+    line-height: 60px;
     color: ${theme.colors.primary};
+
+    @media(min-width: 1024px) {
+        line-height: 70px;
+    }
 `;
 
 export const TitleBorderOutline = styled.div`
-    width: 180px;
-    height: 82px;
+    width: 140px;
+    height: 63px;
     border: 5px solid ${theme.colors.primary};
     background-color: white;
     z-index: 3;
@@ -66,9 +70,7 @@ export const TitleBorderOutline = styled.div`
     }
 
     @media (min-width: 1024px) {
-        order: 2;
-        width: 240px;
-        height: 85px;
+        height: 75px;
     }
 `;
 
@@ -77,14 +79,14 @@ export const ImageFrame = styled.div`
     height: 105px;
     position: absolute;
     top: 15px;
-    left: 125px;
+    left: 90px;
     background: white url(${juliaRamos}) no-repeat top center;
     background-size: 100px 100px;
     border: 5px solid ${theme.colors.text};
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
         top: 12px;
-        left: 150px;
+        left: 125px;
     }
 `;
 

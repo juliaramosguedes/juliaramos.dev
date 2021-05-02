@@ -149,7 +149,7 @@ const Hi: React.FC<HiProps> = ({ contactScroller, hiRef }) => {
                     <Star/>
                 </WrapStar>
             </TitleBorder>
-            <ButtonArrow onClick={() => contactScroller()}>
+            <ButtonArrow onClick={() => contactScroller()} aria-label="Ir para a próxima seção">
                 <DoubleArrow/>
             </ButtonArrow>
         </Section>

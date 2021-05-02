@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {EmailOutline} from '@styled-icons/evaicons-outline/EmailOutline'
-import { darken } from 'polished';
+import { darken, lighten } from 'polished';
 
 import theme from '../theme';
 import bgStars from '../../assets/bg-stars-3.png';
@@ -122,9 +122,22 @@ export const Email = styled.a`
     font-weight: bold;
     z-index: 1;
     position: relative;
+    transition: color 0.5s;
 
     p {
         margin-top: 8px;
+    }
+
+    svg {
+        transition: fill 0.5s;
+    }
+
+    &:hover {
+        color: ${lighten(0.07, theme.colors.secondary)};
+
+        svg {
+            fill: ${lighten(0.07, theme.colors.secondary)};
+        }
     }
 `
 
@@ -138,6 +151,19 @@ export const SocialMedia = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 120px;
+
+    svg {
+        transition: fill 0.5s;
+    }
+
+    a:hover {
+        svg {
+            path {
+            fill: ${lighten(0.07, theme.colors.secondary)};
+
+            }
+        }
+    }
 `
 
 export const FollowMe = styled(Container)`
