@@ -1,4 +1,5 @@
-import React, { RefObject, useCallback, useState } from 'react';
+import React, { useState } from 'react';
+import Link from "next/link";
 
 import { BurgerMenu, Menu, Nav, Wrap } from '../styles/components/NavBar';
 import { Separator } from '../styles/components/Shared';
@@ -6,31 +7,11 @@ import { Separator } from '../styles/components/Shared';
 import Logo from '../assets/logo.svg';
 import theme from '../styles/theme';
 
-interface NavBarProps {
-    scroller: Function;
-    refs: {
-        aboutMeRef: RefObject<HTMLElement>;
-        articlesRef: RefObject<HTMLElement>;
-        contactRef: RefObject<HTMLElement>;
-        projectsRef: RefObject<HTMLElement>;
-        techsRef: RefObject<HTMLElement>;
-    };
-}
-
-const NavBar: React.FC<NavBarProps> = ({
-    refs: { aboutMeRef, articlesRef, contactRef, projectsRef, techsRef },
-    scroller,
-}) => {
+const NavBar: React.FC = (props) => {
     const [checked, setChecked] = useState(false);
 
-    const onClick = useCallback((ref) => {
-        scroller(ref);
-        setChecked(false);
-        return false;
-    }, []);
-
     return (
-        <Nav>
+        <Nav {...props}>
             <Wrap>
                 <Logo/>
                 <BurgerMenu title="Menu">
@@ -45,33 +26,39 @@ const NavBar: React.FC<NavBarProps> = ({
             </Wrap>
             <Menu checked={checked}>
                 <li>
-                    <button title="Ir para a seção Sobre mim" onClick={() => onClick(aboutMeRef)}>
-                        Sobre mim
-                    </button>
+                    <Link href="/#about-me">
+                        <a title="Ir para a seção Sobre mim">Sobre mim</a>
+                    </Link>
                 </li>
                 <Separator color={theme.colors.primary}/>
                 <li>
-                    <button title="Ir para a seção Tecnologias" onClick={() => onClick(techsRef)}>
-                        Tecnologias
-                    </button>
+                    <Link href="/CV">
+                        <a title="Ir para a página Currículo">Currículo</a>
+                    </Link>
                 </li>
                 <Separator color={theme.colors.primary}/>
                 <li>
-                    <button title="Ir para a seção Projetos" onClick={() => onClick(projectsRef)}>
-                        Projetos
-                    </button>
+                    <Link href="/#techs">
+                        <a title="Ir para a seção Tecnologias">Tecnologias</a>
+                    </Link>
                 </li>
                 <Separator color={theme.colors.primary}/>
                 <li>
-                    <button title="Ir para a seção Artigos" onClick={() => onClick(articlesRef)}>
-                        Artigos
-                    </button>
+                    <Link href="/#projects">
+                        <a title="Ir para a seção Projetos">Projetos</a>
+                    </Link>
                 </li>
                 <Separator color={theme.colors.primary}/>
                 <li>
-                    <button title="Ir para a seção Contato" onClick={() => onClick(contactRef)}>
-                        Contato
-                    </button>
+                    <Link href="/#articles">
+                        <a title="Ir para a seção Artigos">Artigos</a>
+                    </Link>
+                </li>
+                <Separator color={theme.colors.primary}/>
+                <li>
+                    <Link href="/#contact">
+                        <a title="Ir para a seção Contato">Contato</a>
+                    </Link>
                 </li>
             </Menu>
         </Nav>

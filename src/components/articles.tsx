@@ -1,4 +1,4 @@
-import React, { RefObject } from 'react';
+import React from 'react';
 
 import { Grid, MoreArticles, Section, Title } from '../styles/components/Articles';
 import { CursorClick } from '@styled-icons/heroicons-solid/CursorClick';
@@ -10,13 +10,9 @@ import { MapsHomeWork } from '@styled-icons/material-rounded/MapsHomeWork';
 import WebSite from './web-site';
 import theme from '../styles/theme';
 
-interface ArticlesProps {
-    articlesRef: RefObject<HTMLElement>
-}
-
-const Articles: React.FC<ArticlesProps> = ({ articlesRef }) => {
+const Articles: React.FC = (props) => {
     return (
-        <Section ref={articlesRef}>
+        <Section {...props} id="articles">
             <Title color={theme.colors.primary}>Artigos</Title>
             <Grid>
                 <WebSite Icon={CursorClick}
