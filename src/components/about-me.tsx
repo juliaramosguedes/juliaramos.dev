@@ -1,4 +1,5 @@
-import React, { RefObject } from 'react';
+import React from "react";
+import { useRouter } from "next/router";
 
 import {
     ImageFrame,
@@ -9,17 +10,15 @@ import {
     TitleBorderOutline,
     Wrap,
 } from '../styles/components/AboutMe';
-import { ColorYellow } from '../styles/components/Shared';
+import { Button, ColorYellow } from '../styles/components/Shared';
 
 import Star from '../assets/star.svg';
 
-interface AboutMeProps {
-    aboutMeRef: RefObject<HTMLElement>
-}
+const AboutMe: React.FC = (props) => {
+    const router = useRouter();
 
-const AboutMe: React.FC<AboutMeProps> = ({ aboutMeRef }) => {
     return (
-        <Section ref={aboutMeRef}>
+        <Section id="about-me" {...props}>
             <Wrap>
                 <TitleBorderOutline>
                     <Title><strong>Sobre</strong><br/> mim</Title>
@@ -38,6 +37,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ aboutMeRef }) => {
                     <p>Eterna aprendiz, estou constantemente me atualizando. Como profissional, acredito que as
                         habilidades comportamentais são tão importantes quanto as técnicas.
                     </p>
+                    <Button onClick={() => router.push("/CV")} title="Currículo da Julia Ramos">Veja meu currículo</Button>
                 </Texts>
                 <Slogan>
                     <Star/>

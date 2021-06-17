@@ -1,5 +1,5 @@
 {
-    "name": "maheoi",
+    "name": "juliaramosdev",
     "version": "0.1.0",
     "private": true,
     "scripts": {
@@ -8,6 +8,7 @@
         "start": "next start"
     },
     "dependencies": {
+        "framer-motion": "^4.1.17",
         "next": "10.0.7",
         "next-images": "^1.7.0",
         "polished": "^4.1.0",

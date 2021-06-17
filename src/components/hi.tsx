@@ -1,5 +1,6 @@
-import React, { RefObject } from 'react';
+import React from 'react';
 import Particles from 'react-particles-js';
+import { useRouter } from "next/router";
 
 import {
     ButtonArrow,
@@ -17,14 +18,11 @@ import pinkPlanet from '../assets/pink-world.png';
 import Star from '../assets/star.svg';
 import DoubleArrow from '../assets/double-arrow.svg';
 
-interface HiProps {
-    contactScroller: Function;
-    hiRef: RefObject<HTMLElement>;
-}
+const Hi: React.FC = (props) => {
+    const router = useRouter();
 
-const Hi: React.FC<HiProps> = ({ contactScroller, hiRef }) => {
     return (
-        <Section ref={hiRef}>
+        <Section {...props} id="hi">
             <Container>
                 <Particles
                     params={{
@@ -149,7 +147,7 @@ const Hi: React.FC<HiProps> = ({ contactScroller, hiRef }) => {
                     <Star/>
                 </WrapStar>
             </TitleBorder>
-            <ButtonArrow onClick={() => contactScroller()} aria-label="Ir para a próxima seção">
+            <ButtonArrow onClick={() => router.push("/#about-me")} aria-label="Ir para a próxima seção">
                 <DoubleArrow/>
             </ButtonArrow>
         </Section>

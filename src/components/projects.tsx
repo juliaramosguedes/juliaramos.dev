@@ -1,4 +1,4 @@
-import React, { useRef, useState, RefObject } from 'react';
+import React, { useRef, useState } from 'react';
 import { ArrowIosBackOutline } from '@styled-icons/evaicons-outline/ArrowIosBackOutline';
 import { ArrowIosForwardOutline } from '@styled-icons/evaicons-outline/ArrowIosForwardOutline';
 import Carousel from 'react-multi-carousel';
@@ -39,11 +39,7 @@ const CustomArrow = ({ direction, Icon, ...props }) => {
     );
 };
 
-interface ProjectsProps {
-    projectsRef: RefObject<HTMLElement>
-}
-
-const Projects: React.FC<ProjectsProps> = ({ projectsRef }) => {
+const Projects: React.FC = (props) => {
     const [showModal, setShowModal] = useState(false);
     const modalRef = useRef(null);
 
@@ -151,7 +147,7 @@ const Projects: React.FC<ProjectsProps> = ({ projectsRef }) => {
     };
 
     return (
-        <Section ref={projectsRef}>
+        <Section {...props} id="projects">
             <Wrap>
                 <Title color={theme.colors.primary}>Projetos</Title>
                 <Carousel
@@ -169,7 +165,7 @@ const Projects: React.FC<ProjectsProps> = ({ projectsRef }) => {
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/OrtZi4Ei_7U"
                             title="Video do projeto Consultoria Educação" frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen></iframe>
+                            allowFullScreen/>
                 </Modal>}
             </Wrap>
         </Section>

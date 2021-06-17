@@ -1,17 +1,13 @@
-import React, { RefObject } from 'react';
+import React from 'react';
 
 import { Grid, Image, Section, Text, Title, TitleBorderOutline, Wrap } from '../styles/components/Techs';
 import Card from './card';
 
 import moon from '../assets/moon.png';
 
-interface TechsProps {
-    techsRef: RefObject<HTMLElement>
-}
-
-const Techs: React.FC<TechsProps> = ({ techsRef }) => {
+const Techs: React.FC = (props) => {
     return (
-        <Section ref={techsRef}>
+        <Section {...props} id="techs">
             <Wrap>
                 <TitleBorderOutline>
                     <Title><strong>Tecno&nbsp;</strong>logias</Title>
