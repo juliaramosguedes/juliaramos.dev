@@ -25,8 +25,7 @@ const AboutMe: React.FC = (props) => {
                     <ImageFrame/>
                 </TitleBorderOutline>
                 <Texts>
-                    <p>Sou engenheira de software na Pitágoras Ampli, uma startup da Kroton Educacional, e professora
-                        assistente de desenvolvimento web na Digital House Brasil.
+                    <p>Sou engenheira de software na Ironhack, uma escola internacional com campus em 8 países fundada para revolucionar a forma como aprendemos sobre tecnologia.
                     </p>
                     <p>Meu propósito é abrir portas para que as pessoas tenham melhores oportunidades de vida e escolhi
                         fazer isso através da minha expertise em tecnologia aplicada ao mercado de educação.
