@@ -23,6 +23,7 @@ export const Section = styled.section`
 
 export const Title = styled(BaseTitle)`
     align-self: flex-end;
+    max-width: 312px;
 `;
 
 export const Grid = styled.div`

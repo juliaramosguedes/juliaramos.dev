@@ -41,7 +41,7 @@ export const Title = styled.h2`
     }
 
     @media (min-width: 768px) {
-        left: -160px;
+        left: -194px;
         strong {
             display: inline;
         }
@@ -60,7 +60,7 @@ export const TitleBorderOutline = styled.div`
 
     @media (min-width: 768px) {
         top: 0;
-        right: -192px;
+        right: -186px;
         order: 2;
         width: 180px;
         margin-bottom: 36px;

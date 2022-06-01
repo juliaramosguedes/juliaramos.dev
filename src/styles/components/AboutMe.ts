@@ -66,7 +66,7 @@ export const TitleBorderOutline = styled.div`
 
     @media (min-width: 768px) {
         order: 2;
-        width: 190px;
+        width: 160px;
     }
 
     @media (min-width: 1024px) {
@@ -86,7 +86,7 @@ export const ImageFrame = styled.div`
 
     @media (min-width: 768px) {
         top: 12px;
-        left: 125px;
+        left: 95px;
     }
 `;
 
@@ -108,13 +108,13 @@ export const Slogan = styled.div`
         order: 2;
         position: absolute;
         top: 112px;
-        right: 15px;
+        right: 25px;
         max-width: 220px;
     }
 
     @media (min-width: 1024px) {
         top: 110px;
-        right: 8px;
+        right: 25px;
         max-width: 320px;
     }
 `;
