@@ -13,7 +13,7 @@ import theme from '../styles/theme';
 const Articles: React.FC = (props) => {
     return (
         <Section {...props} id="articles">
-            <Title color={theme.colors.primary}>Artigos</Title>
+            <Title color={theme.colors.primary}>{'Articles 🇧🇷'}</Title>
             <Grid>
                 <WebSite Icon={CursorClick}
                          url="https://juliaramosguedes.medium.com/quero-ser-dev-e-agora-202d2fb38a8a"
@@ -39,8 +39,8 @@ const Articles: React.FC = (props) => {
                     software</WebSite>
             </Grid>
             <MoreArticles>
-                <a href="https://juliaramosguedes.medium.com/" title="Mais artigos por Julia Ramos"
-                   aria-label="Mais artigos por Julia Ramos">Confira mais em Medium</a>
+                <a href="https://juliaramosguedes.medium.com/" title="More articles by Julia Ramos"
+                   aria-label="More articles by Julia Ramos">See more on Medium</a>
             </MoreArticles>
         </Section>
     );

@@ -60,7 +60,7 @@ export const TitleBorderOutline = styled.div`
 
     @media (min-width: 768px) {
         top: 0;
-        right: -160px;
+        right: -192px;
         order: 2;
         width: 180px;
         margin-bottom: 36px;

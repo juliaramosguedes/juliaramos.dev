@@ -21,28 +21,26 @@ const AboutMe: React.FC = (props) => {
         <Section id="about-me" {...props}>
             <Wrap>
                 <TitleBorderOutline>
-                    <Title><strong>Sobre</strong><br/> mim</Title>
+                    <Title><strong>About</strong><br/> me</Title>
                     <ImageFrame/>
                 </TitleBorderOutline>
                 <Texts>
-                    <p>Sou engenheira de software na Ironhack, uma escola internacional com campus em 8 países fundada para revolucionar a forma como aprendemos sobre tecnologia.
+                    <p>I am a brazilian software engineer at Ironhack, an international school with campuses in 8 countries, founded to revolutionize the way we learn about technology.
                     </p>
-                    <p>Meu propósito é abrir portas para que as pessoas tenham melhores oportunidades de vida e escolhi
-                        fazer isso através da minha expertise em tecnologia aplicada ao mercado de educação.
+                    <p>My purpose is to open doors so people can have better life opportunities and I chose to do so through my expertise in technology, applied to the education market.
                     </p>
-                    <p>Vegana por amor aos animais e à natureza, defensora da diversidade, entusiasta em artes marciais
-                        chinesas, ficção científica e violão. Valorizo a simplicidade e as sutilezas da vida.
+                    <p>Vegan for my love of animals and nature, an advocate for diversity, and an enthusiast of Chinese martial arts, science fiction, and guitar. I value the simplicity and subtleties of life.
                     </p>
-                    <p>Eterna aprendiz, estou constantemente me atualizando. Como profissional, acredito que as
-                        habilidades comportamentais são tão importantes quanto as técnicas.
+                    <p>Eternal apprentice, I am constantly working on myself. As a professional, I believe that behavioral skills are just as important as technical skills.
                     </p>
-                    <Button onClick={() => router.push("/CV")} title="Currículo da Julia Ramos">Veja meu currículo</Button>
+                    <Button onClick={() => router.push("/CV")} title="Julia Ramos'resume">Click to see my resume</Button>
                 </Texts>
                 <Slogan>
                     <Star/>
-                    <h3>Um dos meus lemas é<br/>
+                    <h3>One of my live mottos is
+                        <br/>
                         <ColorYellow>
-                            <strong>"Você escreve código para outras pessoas poderem entender."</strong>
+                            <strong>"You write code so other people understand."</strong>
                         </ColorYellow>
                     </h3>
                 </Slogan>

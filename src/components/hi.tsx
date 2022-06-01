@@ -137,17 +137,17 @@ const Hi: React.FC = (props) => {
                 />
             </Container>
             <TitleBorderOutline>
-                <ParagraphNoMargin>Olá, eu sou a</ParagraphNoMargin>
+                <ParagraphNoMargin>Hi, I am</ParagraphNoMargin>
                 <Title>Julia<br/><ColorWhite>Ramos.</ColorWhite></Title>
-                <Image src={bluePlanet} right="-80px" bottom="-20px" title="Planeta azul" alt="Planeta azul"/>
+                <Image src={bluePlanet} right="-80px" bottom="-20px" title="Blue planet" alt="Blue planet"/>
             </TitleBorderOutline>
             <TitleBorder>
-                <Image src={pinkPlanet} left="-40px" bottom="-30px" title="Planeta rosa" alt="Planeta rosa"/>
+                <Image src={pinkPlanet} left="-40px" bottom="-30px" title="Pink planet" alt="Pink planet"/>
                 <WrapStar>
                     <Star/>
                 </WrapStar>
             </TitleBorder>
-            <ButtonArrow onClick={() => router.push("/#about-me")} aria-label="Ir para a próxima seção">
+            <ButtonArrow onClick={() => router.push("/#about-me")} aria-label="Go to next section">
                 <DoubleArrow/>
             </ButtonArrow>
         </Section>

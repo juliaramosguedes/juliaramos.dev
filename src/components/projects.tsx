@@ -33,7 +33,7 @@ const CustomArrow = ({ direction, Icon, ...props }) => {
     } = props;
 
     return (
-        <CustomArrowStyle direction={direction} {...restProps} aria-label={`Navegar para ${direction === 'right' ? 'direita' : 'esquerda'}`}>
+        <CustomArrowStyle direction={direction} {...restProps} aria-label={`Go to ${direction === 'right' ? 'right' : 'left'}`}>
             <Icon size="40px" color={theme.colors.text}/>
         </CustomArrowStyle>
     );
@@ -49,53 +49,53 @@ const Projects: React.FC = (props) => {
         {
             project: 'Consultoria Educação',
             description: [
-                `O Consultoria Educação é uma plataforma de vendas de cursos de graduação, que paga premiações em dinheiro pelas matrículas realizadas.`,
-                `Eu participei do desenvolvimento desse projeto para a Kroton desde o seu início, atuando sozinha sob a supervisão do Marcio Hariki.`,
-                `O projeto foi desenvolvido com React e BaaS (Backend as a Service) com Node e Firebase (Authentication, Firestore, Functions), hospedado na AWS. Foram criadas uma landing page e uma área logada com dashboard, entre outras coisas.`,
-                `Atualmente, não faço mais parte do desenvolvimento do projeto. Por isso optei por não divulgar o link, já que o projeto atual já foi modificado. Compartilho com vocês os registros do projeto de quando ainda era responsável pelo seu desenvolvimento.`,
+                `Consultoria Educação is a sales platform for undergraduate courses that pays cash prizes for enrollments.`,
+                `I participated in the development of this project for Kroton since its beginning, working solo under the supervision of Marcio Hariki.`,
+                `The project was developed with React and BaaS (Backend as a Service) with Node and Firebase (Authentication, Firestore, Functions), hosted on AWS. A landing page and a login area with a dashboard were created, among other things.`,
+                `Currently, I am no longer part of the project development. This is the reason why I chose not to disclose the link since the current project has already been modified. I share with you the project records from when I was still responsible for its development.`,
             ],
-            buttons: [{ text: 'Ver vídeo', onClick: toggleModal }],
+            buttons: [{ text: 'See video', onClick: toggleModal }],
         },
         {
             project: 'Tic Task',
             description: [
-                `O Tic Task é um web app para você usar a técnica Pomodoro como forma de aumentar a produtividade nos estudos e trabalho.`,
-                `A ideia desse projeto surgiu da necessidade de uma ferramenta para melhorar o desempenho nos meus estudos combinada à vontade de desenvolver um novo projeto.`,
-                `Nesse projeto, eu fiquei responsável pelo desenvolvimento (com React e Firebase), o Dedicio Coelho por UI e a Poliana Branti por UX.`,
+                `Tic Task is a web app that allows you to use the Pomodoro technique to increase productivity in studies and work.`,
+                `The idea for this project came from the need for a tool to help improve performance in my studies alongside the desire of developing a new project.`,
+                `In this project, I was responsible for the development (with React and Firebase), Dedicio Coelho for the UI, and Poliana Branti for the UX.`,
             ],
             buttons: [
                 { text: 'Github', url:'https://github.com/juliaramosguedes/tictask' },
-                { text: 'Ir para o site', url:'https://www.tictask.app/' },
+                { text: 'Go to the website', url:'https://www.tictask.app/' },
             ],
         },
         {
             project: 'Voluntei',
             description: [
-                `Como projeto de conclusão do bootcamp na Ironhack, em conjunto com mais dois amigos (Luan Perosa e Marcus Brandão), criamos um e-commerce fictício.`,
-                `Utilizamos o conhecimento adquirido ao longo dos seis meses de curso de HTML, CSS, Bootstrap, Javascript, Node, React, Git e Github e, ao invés de utilizar o que aprendemos de Express, Mongo e Mongoose, nos desafiamos a aprender e implementar BaaS (Backend as a Service) Firebase, além dos meios de pagamento PayPal e Nano.`,
-                `Esse projeto foi muito importante para o nosso desenvolvimento profissional. Solidificamos nossos conhecimentos, aprendemos novas tecnologias, trabalhamos em equipe, exercitamos a resiliência tão essencial para o trabalho de um desenvolvedor e o resultado foi surpreendente, ficando entre os 3 melhores.`,
+                `I have created a fictional e-commerce platform as a project to complete the bootcamp at Ironhack, along with two more friends (Luan Perosa and Marcus Brandão).`,
+                `We used the knowledge of HTML, CSS, Bootstrap, Javascript, Node, React, Git and Github acquired over the six months the course took, and, instead of using what we learned from Express, Mongo, and Mongoose, we challenged ourselves to learn and implement BaaS (Backend as a Service) Firebase, in addition to PayPal and Nano payment methods.`,
+                `This project was very important for our professional development. We solidified our knowledge, learned new technologies, worked as a team, and exercised the much-needed resilience for developers. We were glad to see the result was impressive, being among the top 3.`,
             ],
             buttons: [
                 {
                     text: 'Github',
                     url:'https://github.com/juliaramosguedes/project-voluntei-ecommerce',
-                }, { text: 'Ir para o site', url:'https://voluntei.juliaramos.dev/' },
+                }, { text: 'Go to the website', url:'https://voluntei.juliaramos.dev/' },
             ],
         },
         {
             project: 'Dungeons & Dragons',
             description: [
-                `Esse projeto é meu xodózinho, pois é o meu primeiro site. Eu comecei o bootcamp na Ironhack partindo do zero e como meu primeiro projeto, criei um jogo web em javascript que simula uma partida de RPG de mesa.`,
-                `Nesse projeto utilizei os conhecimentos que adquiri após 1 mês de curso de HTML, CSS, Bootstrap, Javascript, Git e Github.`,
-                `Amante de RPG de mesa desde a infância, eu apresento minha versão web de Dungeons & Dragons.`,
-                `Minha intenção é proporcionar uma experiência semelhante ao jogo original para os jogadores online, ao recriar a atmosfera do jogo e conduzir a imaginação do jogador para uma imersão na personagem e na história.`,
-                `O objetivo de ter criado o jogo é despertar a curiosidade do jogador em conhecer a versão tradicional.`,
+                `This project has a piece of my heart, for it is my first website. I started the bootcamp at Ironhack from scratch and as my first project, I have created a javascript web game that simulates a tabletop RPG game.`,
+                `In this project, I used the knowledge I acquired after 1 month of HTML, CSS, Bootstrap, Javascript, Git, and Github course.`,
+                `A tabletop RPG lover since childhood, I present my web version of Dungeons & Dragons.`,
+                `My intention is to provide a similar experience to the one you have when playing the original game for online players by recreating the game’s atmosphere and drawing the player's imagination into immersion in the character and story.`,
+                `The purpose of having created the game is to stimulate the player's curiosity so more people get familiar with the traditional version.`,
             ],
             buttons: [
                 {
                     text: 'Github',
                     url:'https://github.com/juliaramosguedes/project-dungeons-dragons',
-                }, { text: 'Ir para o site', url:'https://rpg.juliaramos.dev/' },
+                }, { text: 'Go to the website', url:'https://rpg.juliaramos.dev/' },
             ],
         },
     ];
@@ -108,7 +108,7 @@ const Projects: React.FC = (props) => {
                     {description.map((text, index) => (<p
                         key={`${project.replace(' ', '-')}-description-${index}`}>{text}</p>))}
                     {buttons.map(({ text, onClick, url }) => {
-                        const key = `${text} do projeto ${project}`;
+                        const key = `${text} of project ${project}`;
                         return (
                             <>
                                 {url && !onClick ?
@@ -149,7 +149,7 @@ const Projects: React.FC = (props) => {
     return (
         <Section {...props} id="projects">
             <Wrap>
-                <Title color={theme.colors.primary}>Projetos</Title>
+                <Title color={theme.colors.primary}>Projects</Title>
                 <Carousel
                     responsive={responsive}
                     arrows={true}
@@ -161,9 +161,9 @@ const Projects: React.FC = (props) => {
                     {TestmonialCards()}
                 </Carousel>
                 {showModal &&
-                <Modal close={toggleModal} modalRef={modalRef} title="Projeto Consultoria Educação">
+                <Modal close={toggleModal} modalRef={modalRef} title="Project Consultoria Educação">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/OrtZi4Ei_7U"
-                            title="Video do projeto Consultoria Educação" frameBorder="0"
+                            title="Consultoria Educação video" frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen/>
                 </Modal>}

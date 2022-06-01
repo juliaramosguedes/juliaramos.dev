@@ -10,25 +10,23 @@ const Techs: React.FC = (props) => {
         <Section {...props} id="techs">
             <Wrap>
                 <TitleBorderOutline>
-                    <Title><strong>Tecno&nbsp;</strong>logias</Title>
+                    <Title><strong>Techno&nbsp;</strong>logies</Title>
                 </TitleBorderOutline>
                 <Text>
-                    Sou desenvolvedora web full stack, apaixonada por Javascript e sua stack.
-                    Ex-aluna do bootcamp de desenvolvimento web da Ironhack e atual aluna do bootcamp Ignite da
-                    Rocketseat.
+                    I'm a full-stack web developer, passionate about Javascript and its stack. A former student of Ironhack's Web Development bootcamp and Rocketseat's Ignite bootcamp and current student of Erick Wendell's Javascript Expert bootcamp.
                 </Text>
                 <Grid>
-                    <Card>HTML, CSS, Bootstrap, <br/>Git, Github</Card>
+                    <Card>HTML, CSS, <br/>ChakraUI, Git, Github</Card>
                     <Card>Docker, <br/>MongoDB, <br/>MySql, <br/>Postgres</Card>
-                    <Card>Programação funcional, Programação orientada a objetos</Card>
+                    <Card>Functional programming, Object oriented programming</Card>
                     <Card>Javascript, Typescript, <br/>Python, Kotlin</Card>
                     <Card>Mongoose, <br/>TypeORM, SqlAlchemy, Springboot</Card>
-                    <Card>Desenvolvimento orientado a testes</Card>
+                    <Card>Test driven development</Card>
                     <Card>React, Firebase, Node, Express, <br/>Next, Jest</Card>
                     <Card>REST, <br/>Protocol Buffer, <br/>gRPC, <br/>GraphQL</Card>
                     <Card>Domain-driven design, <br/>Model–view–controller</Card>
                 </Grid>
-                <Card alignCenter>Metodologias ágeis</Card>
+                <Card alignCenter>Agile methodologies</Card>
             </Wrap>
             <Image>
                 <img src={moon} title="Lua" alt="Lua"/>

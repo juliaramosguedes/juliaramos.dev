@@ -28,34 +28,34 @@ const Contact: React.FC = (props) => {
             <Stars/>
             <Twinkling/>
             <Clouds/>
-            <Title color="white">Contato</Title>
+            <Title color="white">Contact</Title>
             <Container>
-                <Text>Você pode falar comigo através do email</Text>
-                <Email href="mailto:hi@juliaramos.dev" title="Email da Julia Ramos"><EmailIcon color="white"
+                <Text>You can talk to me via email</Text>
+                <Email href="mailto:hi@juliaramos.dev" title="Julia Ramos's e-mail"><EmailIcon color="white"
                                                                                                size="40px"/>hi@juliaramos.dev</Email>
             </Container>
             <FollowMe>
-                <Text>Me adicione no LinkedIn e acompanhe meu trabalho no Github</Text>
+                <Text>Add me on LinkedIn and follow my work on Github</Text>
                 <SocialMedia>
-                    <a href="https://www.linkedin.com/in/juliaramosguedes" title="Perfil no Linkedin da Julia Ramos">
+                    <a href="https://www.linkedin.com/in/juliaramosguedes" title="Julia Ramos' Linkedin Profile">
                         <LinkedinIn color={theme.colors.secondary} size="40px" title="Linkedin"/>
                     </a>
                     <Separator height="65px" color={theme.colors.secondary}/>
-                    <a href="https://www.github.com/juliaramosguedes" title="Perfil no Github da Julia Ramos">
+                    <a href="https://www.github.com/juliaramosguedes" title="Julia Ramos' Github Profile">
                         <Github color={theme.colors.secondary} size="40px" title="Github"/>
                     </a>
                 </SocialMedia>
             </FollowMe>
             <Footer>
-                <Text>Desenvolvido com{' '}
-                    <Heart title="Coração" width="16px"/> & <Coffee title="Café" width="18px"/>
-                    {' '}por <a
+                <Text>Developed with{' '}
+                    <Heart title="Heatr" width="16px"/> & <Coffee title="Coffee" width="18px"/>
+                    {' '}by <a
                         href="https://www.linkedin.com/in/juliaramosguedes"
-                        title="Perfil no Linkedin da Julia Ramos"
+                        title="Julia Ramos' Linkedin Profile"
                     >Julia Ramos</a>
                 </Text>
-                <Text>&copy; Copyright 2021 - Todos os direitos reservados</Text>
-                <Planet src={saturn} title="Planeta com anel" alt="Planeta com anel, como Saturno" />
+                <Text>&copy; Copyright 2021 - All rights reserved</Text>
+                <Planet src={saturn} title="Planet" alt="Planet similar to Saturn" />
             </Footer>
         </Section>
     );

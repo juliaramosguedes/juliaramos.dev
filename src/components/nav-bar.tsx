@@ -27,37 +27,37 @@ const NavBar: React.FC = (props) => {
             <Menu checked={checked}>
                 <li>
                     <Link href="/#about-me">
-                        <a title="Ir para a seção Sobre mim">Sobre mim</a>
+                        <a title="Go to About me section">About me</a>
                     </Link>
                 </li>
                 <Separator color={theme.colors.primary}/>
                 <li>
                     <Link href="/CV">
-                        <a title="Ir para a página Currículo">Currículo</a>
+                        <a title="Go to resume">Resume</a>
                     </Link>
                 </li>
                 <Separator color={theme.colors.primary}/>
                 <li>
                     <Link href="/#techs">
-                        <a title="Ir para a seção Tecnologias">Tecnologias</a>
+                        <a title="Go to Technologies section">Technologies</a>
                     </Link>
                 </li>
                 <Separator color={theme.colors.primary}/>
                 <li>
                     <Link href="/#projects">
-                        <a title="Ir para a seção Projetos">Projetos</a>
+                        <a title="Go to Projects section">Projects</a>
                     </Link>
                 </li>
                 <Separator color={theme.colors.primary}/>
                 <li>
                     <Link href="/#articles">
-                        <a title="Ir para a seção Artigos">Artigos</a>
+                        <a title="Go to Articles section">Articles</a>
                     </Link>
                 </li>
                 <Separator color={theme.colors.primary}/>
                 <li>
                     <Link href="/#contact">
-                        <a title="Ir para a seção Contato">Contato</a>
+                        <a title="Go to Contact section">Contact</a>
                     </Link>
                 </li>
             </Menu>

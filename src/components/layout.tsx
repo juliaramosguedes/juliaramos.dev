@@ -12,7 +12,7 @@ type Props = {
 const Layout: React.FunctionComponent<Props> = ({
     children,
     className = "",
-    title = "Julia Ramos, desenvolvedora e professora"
+    title = "Julia Ramos, developer"
 }) => (
     <motion.div
         exit={{ opacity: 0 }}
